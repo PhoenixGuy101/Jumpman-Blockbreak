@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class KillBox : MonoBehaviour
 {
-    [SerializeField]
-    private Vector3 respawn;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
