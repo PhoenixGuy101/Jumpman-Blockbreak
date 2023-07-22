@@ -1,0 +1,627 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1689290996944154, "dur": 1788304, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290996944582, "dur": 14692, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290996959279, "dur": 31091, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290996990401, "dur": 1236416, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290998226820, "dur": 494073, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290998720895, "dur": 11562, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290998733141, "dur": 9, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1689290998065389, "dur": 135366, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1689290998066151, "dur": 42585, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1689290998187706, "dur": 3492, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1689290998191201, "dur": 9532, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1689290998191781, "dur": 8506, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1689290998204839, "dur": 1058, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1689290998204068, "dur": 1850, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290998734238, "dur": 151, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1689290998261947, "dur":1199, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998263150, "dur":72, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1689290998263253, "dur":15, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1689290998263268, "dur":485, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1689290998263767, "dur":512, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998264279, "dur":0, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998706780, "dur":354, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707134, "dur":87, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707221, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707224, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707229, "dur":13, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707242, "dur":26, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707268, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707268, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707284, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707286, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707289, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707290, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707294, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707294, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707297, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707298, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707302, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707303, "dur":2, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707305, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707306, "dur":24, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707330, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707331, "dur":2, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707333, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707334, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707340, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707341, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707345, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707346, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707349, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707350, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707353, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707354, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707357, "dur":1, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707378, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998707416, "dur":1675, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1689290998264221, "dur":87, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998264308, "dur":4023, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998268335, "dur":8884, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1689290998277225, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998277240, "dur":1921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1689290998279193, "dur":37299, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998316495, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998316502, "dur":2086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998318617, "dur":23817, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998342438, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998342447, "dur":1559, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998344043, "dur":26033, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998370079, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998370087, "dur":3652, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998373808, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998373949, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998373957, "dur":3724, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998377721, "dur":695, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998378419, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998378426, "dur":3594, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998382070, "dur":125836, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998507931, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998507941, "dur":1220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998509201, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998509450, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998509459, "dur":1098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998510592, "dur":33586, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998544183, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1689290998544814, "dur":982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":1, "ts":1689290998545831, "dur":160956, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998264253, "dur":61, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998264314, "dur":4022, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998268338, "dur":268, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1689290998268608, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998286699, "dur":1427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1689290998288161, "dur":19727, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998307891, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998307898, "dur":1639, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998309576, "dur":205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998309784, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998309791, "dur":1598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998311427, "dur":358, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998311805, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998311814, "dur":2702, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998314558, "dur":23610, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998338172, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998338180, "dur":2579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998340806, "dur":20742, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998361552, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998361563, "dur":3911, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998365512, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998365657, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998365665, "dur":1361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998367073, "dur":686, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998367762, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998367770, "dur":1577, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998369393, "dur":243, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998369639, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998369648, "dur":2338, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998372058, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998372192, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998372218, "dur":2360, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998374715, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998374856, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998374864, "dur":2855, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998377766, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998377960, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998377967, "dur":2587, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998380591, "dur":6336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998386935, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998386948, "dur":5903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998392889, "dur":128143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998521036, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998521046, "dur":1182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1689290998522274, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1689290998522321, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998522328, "dur":1366, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1689290998523738, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1689290998523948, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998523956, "dur":973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1689290998524976, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1689290998525020, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998525027, "dur":1390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1689290998526458, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/resources.assets" }}
+,{ "pid":12345, "tid":2, "ts":1689290998526499, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998526506, "dur":1769, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/resources.assets" }}
+,{ "pid":12345, "tid":2, "ts":1689290998528311, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/level1" }}
+,{ "pid":12345, "tid":2, "ts":1689290998528349, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998528358, "dur":941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/level1" }}
+,{ "pid":12345, "tid":2, "ts":1689290998529336, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1689290998529374, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998529381, "dur":739, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1689290998530154, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1689290998530196, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998530203, "dur":3349, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1689290998533591, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1689290998533632, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1689290998533639, "dur":1082, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1689290998534786, "dur":171996, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998264178, "dur":119, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998264297, "dur":4042, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998268340, "dur":249, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1689290998268592, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998283901, "dur":3307, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1689290998287246, "dur":20271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998307522, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998307533, "dur":1535, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998309103, "dur":21216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998330324, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998330340, "dur":1130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998331508, "dur":201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998331713, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998331722, "dur":1686, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998333446, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998333597, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998333607, "dur":1477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998335141, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998335297, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998335306, "dur":1127, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998336469, "dur":22854, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998359330, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998359342, "dur":1685, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998361070, "dur":246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998361320, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998361337, "dur":3652, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998365027, "dur":29506, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998394537, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998394552, "dur":5944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998400536, "dur":197684, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998598224, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1689290998598234, "dur":925, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":3, "ts":1689290998599192, "dur":107597, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998264134, "dur":154, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998264289, "dur":4041, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998268335, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1689290998268485, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998270726, "dur":1271, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1689290998272030, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1689290998272109, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998272117, "dur":1634, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1689290998273775, "dur":114252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":4, "ts":1689290998388030, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998388037, "dur":86683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":4, "ts":1689290998474766, "dur":159182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1689290998633953, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1689290998633964, "dur":1549, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1689290998635557, "dur":71223, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1689290998264223, "dur":88, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1689290998264311, "dur":4018, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1689290998268335, "dur":34958, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1689290998303298, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1689290998303795, "dur":2203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1689290998306079, "dur":235662, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1689290998541745, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1689290998541757, "dur":9381, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1689290998551201, "dur":155582, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998264110, "dur":174, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998264284, "dur":4071, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998268355, "dur":8267, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1689290998276624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998276635, "dur":1873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1689290998278534, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998278703, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998279603, "dur":4131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998283780, "dur":29677, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998313461, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998313471, "dur":1743, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998315250, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998315443, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998315450, "dur":1848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998317338, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998317461, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998317467, "dur":2044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998319556, "dur":218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998319777, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998319784, "dur":1274, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998321095, "dur":40069, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998361168, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998361178, "dur":3299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998364518, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998364697, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998364706, "dur":1974, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998366721, "dur":394, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998367119, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998367128, "dur":1702, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998368887, "dur":272, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998369163, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998369170, "dur":2064, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998371301, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998371463, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998371471, "dur":2826, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998374338, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998374626, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998374633, "dur":3115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998377791, "dur":1267, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998379061, "dur":9, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998379076, "dur":6693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998385822, "dur":208059, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998593887, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1689290998593897, "dur":1012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1689290998594948, "dur":111848, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998264394, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998264395, "dur":3947, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998268344, "dur":8606, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1689290998276954, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998277056, "dur":2284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1689290998279384, "dur":39303, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998318693, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998318713, "dur":2234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998320986, "dur":238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998321228, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998321235, "dur":960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998322231, "dur":27440, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998349675, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998349684, "dur":1091, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998350822, "dur":36416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998387242, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998387266, "dur":9297, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998396653, "dur":163054, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998559711, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1689290998559723, "dur":1228, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1689290998560988, "dur":145802, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998264150, "dur":143, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998264293, "dur":4062, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998268356, "dur":197, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1689290998268575, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998281145, "dur":3638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1689290998284812, "dur":25047, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998309863, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998309870, "dur":1538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998311445, "dur":22397, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998333849, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998333857, "dur":2337, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998336234, "dur":290, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998336528, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998336536, "dur":1144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998337714, "dur":21684, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998359402, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998359411, "dur":3066, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998362516, "dur":168549, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998531069, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998531079, "dur":1038, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1689290998532162, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":8, "ts":1689290998532205, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998532239, "dur":2477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":8, "ts":1689290998534760, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/boot.config" }}
+,{ "pid":12345, "tid":8, "ts":1689290998534899, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1689290998534906, "dur":1080, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/boot.config" }}
+,{ "pid":12345, "tid":8, "ts":1689290998536029, "dur":170744, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998264254, "dur":63, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998264317, "dur":4035, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998268354, "dur":523, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1689290998268880, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998270160, "dur":1866, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1689290998272065, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":9, "ts":1689290998272149, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998272156, "dur":1802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":9, "ts":1689290998273994, "dur":5276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":9, "ts":1689290998279273, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998279278, "dur":2709, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":9, "ts":1689290998282020, "dur":32180, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998314204, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998314212, "dur":1638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998315886, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998316023, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998316030, "dur":1717, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998317785, "dur":24091, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998341880, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998341890, "dur":1845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998343789, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998343939, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998343947, "dur":1328, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998345313, "dur":1171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998346487, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998346496, "dur":1678, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998348207, "dur":21654, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998369864, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998369872, "dur":2917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998372832, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998372961, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998372969, "dur":2244, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998375250, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998375362, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998375369, "dur":3249, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998378654, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998378786, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998378792, "dur":3319, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998382155, "dur":255125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998637284, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1689290998637292, "dur":1503, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":9, "ts":1689290998638819, "dur":67973, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998264190, "dur":110, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998264300, "dur":4033, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998268335, "dur":8560, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1689290998276897, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998276908, "dur":1951, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1689290998278893, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998279013, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998279657, "dur":4127, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998283822, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998284101, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998284165, "dur":2534, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998286736, "dur":24118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998310857, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998310865, "dur":2308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998313217, "dur":256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998313475, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998313481, "dur":2248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998315764, "dur":21240, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998337008, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998337018, "dur":930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998337979, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998338160, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998338169, "dur":2525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998340830, "dur":131374, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998472211, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998472224, "dur":1133, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998473398, "dur":2787, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998476189, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998476200, "dur":2656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998478894, "dur":64427, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998543325, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1689290998543337, "dur":1249, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1689290998544627, "dur":162152, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998264212, "dur":92, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998264304, "dur":4053, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998268358, "dur":8735, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1689290998277097, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998277113, "dur":1609, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1689290998278751, "dur":15734, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998294513, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998294525, "dur":1156, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998295713, "dur":52762, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998348483, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998348497, "dur":1960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998350508, "dur":21946, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998372458, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998372465, "dur":2276, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998374778, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998374904, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998374912, "dur":1949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998376899, "dur":390, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998377292, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998377299, "dur":3217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998380555, "dur":299, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998380858, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998380865, "dur":6770, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998387673, "dur":169466, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998557145, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1689290998557156, "dur":1900, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":11, "ts":1689290998559096, "dur":147688, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998264270, "dur":10, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998264280, "dur":4047, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998268335, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":12, "ts":1689290998268338, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998268441, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/app.info" }}
+,{ "pid":12345, "tid":12, "ts":1689290998268446, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998269245, "dur":1902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/app.info" }}
+,{ "pid":12345, "tid":12, "ts":1689290998271150, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":12, "ts":1689290998271261, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998271773, "dur":1692, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":12, "ts":1689290998273492, "dur":31874, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998305371, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998305446, "dur":4519, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998310002, "dur":1015, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998311020, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998311027, "dur":2930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998313992, "dur":169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998314164, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998314171, "dur":2633, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998316838, "dur":24601, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998341443, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998341453, "dur":1531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998343039, "dur":25294, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998368337, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998368346, "dur":1248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998369644, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998369796, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998369803, "dur":2559, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998372403, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998372555, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998372564, "dur":2838, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998375444, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998375586, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998375593, "dur":3137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998378769, "dur":425, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998379197, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998379204, "dur":2926, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998382191, "dur":174084, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998556282, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1689290998556295, "dur":1389, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":12, "ts":1689290998557725, "dur":149052, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998264287, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998264287, "dur":4045, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998268335, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":13, "ts":1689290998268485, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998275962, "dur":2061, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":13, "ts":1689290998278062, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":13, "ts":1689290998278154, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998278950, "dur":8011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":13, "ts":1689290998286998, "dur":20620, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998307622, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998307629, "dur":2096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998309774, "dur":336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998310114, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998310120, "dur":2584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998312753, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998312887, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998312894, "dur":2667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998315597, "dur":32769, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998348369, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998348380, "dur":2068, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998350738, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998350968, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998350976, "dur":2362, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998353397, "dur":21603, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998375005, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998375016, "dur":2232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998377287, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998377419, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998377442, "dur":2676, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998380154, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998380280, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998380287, "dur":7715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998388070, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998388217, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998388224, "dur":5083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998393357, "dur":155783, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998549145, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1689290998549159, "dur":2291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":13, "ts":1689290998551491, "dur":155284, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998264307, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998264307, "dur":4038, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998268347, "dur":621, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":14, "ts":1689290998268970, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998270167, "dur":1980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":14, "ts":1689290998272180, "dur":3289, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998275471, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998275977, "dur":1463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998277473, "dur":32663, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore.exe" }}
+,{ "pid":12345, "tid":14, "ts":1689290998310139, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998310144, "dur":1495, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore.exe" }}
+,{ "pid":12345, "tid":14, "ts":1689290998311677, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998311821, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998311827, "dur":2696, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998314569, "dur":53054, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998367627, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998367635, "dur":1738, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998369433, "dur":457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998369894, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998369901, "dur":2702, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998372641, "dur":233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998372877, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998372885, "dur":3303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998376228, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998376351, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998376358, "dur":4010, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998380415, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998380571, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998380578, "dur":12056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998392747, "dur":115026, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998507777, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998507787, "dur":1186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998509015, "dur":196688, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998705708, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1689290998705717, "dur":988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":14, "ts":1689290998706728, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":14, "ts":1689290998706729, "dur":1, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998264330, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998264330, "dur":4024, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998268354, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":15, "ts":1689290998268529, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998276996, "dur":2035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":15, "ts":1689290998279068, "dur":37407, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998316478, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998316486, "dur":2668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998319196, "dur":22264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998341471, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998341485, "dur":2204, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998343732, "dur":29356, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998373091, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998373099, "dur":3009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998376222, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998376342, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998376349, "dur":3442, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998379857, "dur":538, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998380398, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998380405, "dur":8863, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998389328, "dur":108433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998497793, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998497807, "dur":1271, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998499118, "dur":1110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998500232, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998500242, "dur":1397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998501679, "dur":217, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998501899, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998501908, "dur":1070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998503022, "dur":109618, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998612645, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1689290998612655, "dur":843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":15, "ts":1689290998613523, "dur":93255, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998264345, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998264346, "dur":4003, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998268351, "dur":8660, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":16, "ts":1689290998277014, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998277077, "dur":2532, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":16, "ts":1689290998279649, "dur":19511, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998299166, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998299177, "dur":931, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998300140, "dur":17052, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998317202, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998317227, "dur":2214, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998319476, "dur":199, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998319677, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998319684, "dur":1145, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998320871, "dur":23374, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998344248, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998344257, "dur":1212, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998345506, "dur":23393, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998368902, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998368914, "dur":3483, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998372460, "dur":586, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998373050, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998373058, "dur":2730, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998375825, "dur":551, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998376379, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998376387, "dur":3291, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998379737, "dur":160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998379900, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998379908, "dur":4907, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998384852, "dur":115711, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998500568, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998500578, "dur":3742, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998504361, "dur":1075, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998505440, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998505451, "dur":1451, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998506938, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998507128, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998507138, "dur":1449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998508629, "dur":4461, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998513095, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998513109, "dur":3066, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":16, "ts":1689290998516249, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":16, "ts":1689290998516432, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998517253, "dur":1609, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":16, "ts":1689290998518900, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":16, "ts":1689290998518944, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998519006, "dur":1242, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":16, "ts":1689290998520288, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":16, "ts":1689290998520330, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998520337, "dur":1172, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":16, "ts":1689290998521550, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":16, "ts":1689290998521599, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998521605, "dur":830, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":16, "ts":1689290998522476, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":16, "ts":1689290998522519, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998522526, "dur":1194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":16, "ts":1689290998523757, "dur":14838, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":16, "ts":1689290998538601, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1689290998538612, "dur":2194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/lhett/OneDrive/Documents/Unity Builds/AnimusCore_1.2/AnimusCore_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":16, "ts":1689290998540860, "dur":165912, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1689290998710340, "dur":1690, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1689290998734426, "dur": 715, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1689290998733130, "dur": 2038, "ph": "X", "name": "Write chrome-trace events", "args": {} },
