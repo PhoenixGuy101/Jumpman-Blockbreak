@@ -63,20 +63,20 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         //listen for a variety of events
-        StageEntranceExit.OnStageExit += ChangeStage;
+        StageEnd.OnStageExit += ChangeStage;
         PlayerController.OnPlayerDeath += PlayerRespawn;
         LevelLoadCallback.AfterStart += ActiveStageReset;
-        LevelEnd.OnPlayerReachingEnd += WinLevel;
+        StageEnd.OnPlayerReachingEnd += WinLevel;
         InitLevel(); //initialize the level
     }
 
     private void OnDisable()
     {
         //disable all the listeners
-        StageEntranceExit.OnStageExit -= ChangeStage;
+        StageEnd.OnStageExit -= ChangeStage;
         PlayerController.OnPlayerDeath -= PlayerRespawn;
         LevelLoadCallback.AfterStart -= ActiveStageReset;
-        LevelEnd.OnPlayerReachingEnd -= WinLevel;
+        StageEnd.OnPlayerReachingEnd -= WinLevel;
     }
 
     private void Start()
