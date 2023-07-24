@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     #region Levels&StagesProperties
     private int currLevelIndex;
     private int numLevelsTotal;
+    private LevelStats levelStats;
 
     private GameObject[] stageArray; //an array of all the stages in one level
     public GameObject[] stageArrayProp //property to access stageArray
@@ -22,6 +23,8 @@ public class GameManager : Singleton<GameManager>
     {
         get { return currStageIndex; }
     }
+    private int cycleTotal;
+    private int cycleCurr;
     #endregion
 
     #region PlayerStuff
@@ -63,9 +66,9 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         //listen for a variety of events
-        StageEnd.OnStageExit += ChangeStage;
+        StageEnd.OnStageExit += StageExit;
         PlayerController.OnPlayerDeath += PlayerRespawn;
-        LevelLoadCallback.AfterStart += ActiveStageReset;
+        LevelLoadCallback.AfterStart += SetStagesInactive;
         StageEnd.OnPlayerReachingEnd += WinLevel;
         InitLevel(); //initialize the level
     }
@@ -73,9 +76,9 @@ public class GameManager : Singleton<GameManager>
     private void OnDisable()
     {
         //disable all the listeners
-        StageEnd.OnStageExit -= ChangeStage;
+        StageEnd.OnStageExit -= StageExit;
         PlayerController.OnPlayerDeath -= PlayerRespawn;
-        LevelLoadCallback.AfterStart -= ActiveStageReset;
+        LevelLoadCallback.AfterStart -= SetStagesInactive;
         StageEnd.OnPlayerReachingEnd -= WinLevel;
     }
 
@@ -114,8 +117,13 @@ public class GameManager : Singleton<GameManager>
 
         currLevelIndex = SceneManager.GetActiveScene().buildIndex; //set the level index to the currently loaded one
 
-        if (currLevelIndex > 0) //if not the main menu, ignore the stage setup
+        if (currLevelIndex > 0) //if not the main menu, ignore the stage and level setup
         {
+            levelStats = GameObject.FindGameObjectWithTag("Level").GetComponent<LevelStats>();
+            cycleTotal = levelStats.levelCycleAmount;
+            cycleCurr = cycleTotal;
+            playerRespawnPos = levelStats.levelPlayerStart;
+
             stageArray = null; //reset stageArray
             StageSorter stageSorter = new StageSorter(); //initialize the stage sorter
             stageArray = GameObject.FindGameObjectsWithTag("Stage"); //add all the stages to the array
@@ -128,64 +136,42 @@ public class GameManager : Singleton<GameManager>
             playerController.playerJumpHeight = jumpHeight; //communicate to the player controller the set jump height and time
             playerController.playerJumpTime = jumpTime;
 
-            if (stageArray.Length >= 1) InitStage(-1); //initialize stage 0 (using -1 as a placeholder argument) if there's at least 1 stage present
+            if (stageArray.Length >= 1) InitStage(0); //initialize stage 0 if there's at least 1 stage present
         }
         
     }
     private void InitStage(int index)
     {
-        if (index == -1) //this is done when a level is initialized, and therefore it guarantee sets the stage up in the 0 index of the stageArray
-        {
-            stageArray[0].TryGetComponent(out StageManager stageManager);       //get the stageManager script attached to the stage GameObject prefab
-            cameraComponent.transform.position = stageManager.stageCameraPos;   //the stageManager script gives values for the camera position and size 
-            cameraComponent.orthographicSize = stageManager.stageCameraSize;
-            currStageIndex = 0;
-        }
-        else if (index != currStageIndex) //same as above, but it now changes the stage when the current stageArray index isn't identical to the stage GameObject
-                                          //index the player is moving to, instead of working with only stageArray index 0
-        {
-            stageArray[index].TryGetComponent(out StageManager stageManager);
-            cameraComponent.transform.position = stageManager.stageCameraPos;
-            cameraComponent.orthographicSize = stageManager.stageCameraSize;
-            currStageIndex = index;
-        }
-        playerRespawnPos = playerPrefab.transform.position; //change the player's respawn position to the first location it is in when initializing the stage
+        stageArray[index].TryGetComponent(out IStage stageEnter);
+        if (stageEnter != null) stageEnter.InitializeStage();
+        stageArray[index].TryGetComponent(out StageManager stageManager);
+        cameraComponent.transform.position = stageManager.stageCameraPos;
+        cameraComponent.orthographicSize = stageManager.stageCameraSize;
+        currStageIndex = index;
+        //playerRespawnPos = playerPrefab.transform.position; //change the player's respawn position to the first location it is in when initializing the stage
 
         Debug.Log("Current Stage Index: " + currStageIndex);
         
     }
-    private void ChangeStage(int[] index, Vector3[] position)   //method that focuses on the exiting and entering of new stages; it is triggered by the OnStageExit
-                                                                //event from the StageExitEntrance script attached to the Exit prefab
+    private void StageExit(int[] index, Vector3[] position)   //method triggered by the OnStageExit event from the StageExitEntrance script attached to the Exit prefab
+                                                              //interprets the info from the event to know how to change the stages.
     {
-        playerPrefab.transform.position = index[0] == currStageIndex ? position[1] : position[0]; //test to see where the player needs to be moved to based on
-                                                                                                  //the current stage index, and the indices provided by the Exit GameObject:
-                                                                                                  //if the player is in stage 1 and crosses the exit btwn 1 and 2, this
-                                                                                                  //line will put the player onto the starting position in stage 2
         Debug.Log(index[0] == currStageIndex);
-        if (index[0] == currStageIndex) //if the current stage index is the first one listed in the entrance/exit script, continue here, which will set up the other stage
-                                        //listed to be entered, while the current/first stage listed will be considered left by the player, thus telling the stage manager
-                                        //to act as expected
-        {
-            stageArray[index[1]].TryGetComponent(out IStage stageEnter);
-            if (stageEnter != null) stageEnter.InitializeStage();
-            InitStage(index[1]);
-            stageArray[index[0]].TryGetComponent(out IStage stageExit);
-            if (stageExit != null) stageExit.LeaveStage();
-        }
-        else //opposite of the above if statement
-        {
-            stageArray[index[0]].TryGetComponent(out IStage stageEnter);
-            if (stageEnter != null) stageEnter.InitializeStage();
-            InitStage(index[0]);
-            stageArray[index[1]].TryGetComponent(out IStage stageExit);
-            if (stageExit != null) stageExit.LeaveStage();
-        }
-        
+        if (index[0] == currStageIndex) ChangeStage(index[1], index[0], position[1]);
+            
+        else ChangeStage(index[0], index[1], position[0]);
+
+    }
+    private void ChangeStage(int entering, int exiting, Vector3 playerPos)  //method that is called whenever the active stage changes.
+    {
+        playerPrefab.transform.position = playerPos;
+        InitStage(entering);
+        stageArray[exiting].TryGetComponent(out IStage exitStage);
+        if (exitStage != null) exitStage.LeaveStage();
     }
 
-    private void ActiveStageReset() //runs at the beginning of a level being loaded, just after the start function has run as it listens to an event
-                                    //that tells it to do so. This method makes all stages except for the first one (which the player is in)
-                                    //in stageArray be inactive
+    private void SetStagesInactive() //listens to an event from LevelLoadCallback that runs just after the start function has executed
+                                    //This method makes all stages except for the first one in stageArray be inactive
     {
         if (stageArray.Length > 1)
         {
@@ -241,12 +227,14 @@ public class GameManager : Singleton<GameManager>
 
     private void PlayerRespawn()
     {
-        playerPrefab.transform.position = playerRespawnPos;
-        stageArray[currStageIndex].TryGetComponent(out IStage stageInterface);
+        ChangeStage(0, currStage, playerRespawnPos);
+        //playerPrefab.transform.position = playerRespawnPos;
+        /*stageArray[currStageIndex].TryGetComponent(out IStage stageInterface);
         if (stageInterface != null)
         {
             stageInterface.PlayerDeath();
-        }
+        }*/
+        cycleCurr = cycleTotal;
         playerDeaths++;
     }
 

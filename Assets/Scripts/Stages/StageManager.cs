@@ -6,6 +6,13 @@ public class StageManager : MonoBehaviour, IStage
 {
     //this script is part of the Stage prefab, and it contains the properties and methods needed to keep track of stages, and shift between them
     [SerializeField]
+    private int index; //not really used
+    public int stageIndex
+    {
+        get { return index; }
+    }
+    
+    [SerializeField]
     private Vector3 cameraPos; //the camera's position when the stage is switched to
     public Vector3 stageCameraPos
     {
@@ -16,18 +23,6 @@ public class StageManager : MonoBehaviour, IStage
     public float stageCameraSize
     {
         get { return cameraSize; }
-    }
-    [SerializeField]
-    private int index; //not really used
-    public int stageIndex
-    {
-        get { return index; }
-    }
-    [SerializeField]
-    private Vector3 playerStart; //not really used
-    public Vector3 stagePlayerStart
-    {
-        get { return playerStart; }
     }
 
     private GameObject obstacleChild;   //the obstacle child object, which serves as a folder for all obstacle objects in the stage

@@ -7,6 +7,7 @@ TagManager:
   - Block
   - Platform
   - Stage
+  - Level
   layers:
   - Default
   - TransparentFX

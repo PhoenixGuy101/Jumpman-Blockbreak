@@ -18474,6 +18474,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1795020073972463160, guid: 802d316465f494840aaca8934bd79f71, type: 3}
+      propertyPath: playerStart.x
+      value: -7.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795020073972463160, guid: 802d316465f494840aaca8934bd79f71, type: 3}
+      propertyPath: playerStart.y
+      value: -1.69
+      objectReference: {fileID: 0}
     - target: {fileID: 5272459219497191408, guid: 802d316465f494840aaca8934bd79f71, type: 3}
       propertyPath: m_Name
       value: LevelLoadCallback
