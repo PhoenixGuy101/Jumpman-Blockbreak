@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2e6fd7c01371b5c459ab29fb7030ef2a
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level1AnimusCore.unity
     guid: 97300d1ba109711448a854ef9fe724c5
   m_configObjects: {}
