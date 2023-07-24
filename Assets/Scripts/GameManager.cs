@@ -69,7 +69,7 @@ public class GameManager : Singleton<GameManager>
         StageEnd.OnStageExit += StageExit;
         PlayerController.OnPlayerDeath += PlayerRespawn;
         LevelLoadCallback.AfterStart += SetStagesInactive;
-        StageEnd.OnPlayerReachingEnd += WinLevel;
+        StageEnd.OnPlayerReachingEnd += ReachedEnd;
         InitLevel(); //initialize the level
     }
 
@@ -79,7 +79,7 @@ public class GameManager : Singleton<GameManager>
         StageEnd.OnStageExit -= StageExit;
         PlayerController.OnPlayerDeath -= PlayerRespawn;
         LevelLoadCallback.AfterStart -= SetStagesInactive;
-        StageEnd.OnPlayerReachingEnd -= WinLevel;
+        StageEnd.OnPlayerReachingEnd -= ReachedEnd;
     }
 
     private void Start()
@@ -185,6 +185,16 @@ public class GameManager : Singleton<GameManager>
             }
         }
     }
+
+    private void ReachedEnd()
+    {
+        cycleCurr--;
+        Debug.Log("cycleCurr: " + cycleCurr);
+        //update ui
+        if (cycleCurr <= 0) WinLevel();
+        else ChangeStage(0, currStage, playerRespawnPos);
+    }
+
     #endregion
     private void WinLevel()
     {
