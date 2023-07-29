@@ -85,6 +85,8 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         numLevelsTotal = SceneManager.sceneCountInBuildSettings; //get the total amount of levels
+        playerDeaths = 0;
+        playTime = 0;
     }
 
     private void Update()
@@ -112,8 +114,6 @@ public class GameManager : Singleton<GameManager>
     {
         HidePauseMenu();
         HideWinMenu();
-        playTime = 0;
-        playerDeaths = 0;
 
         currLevelIndex = SceneManager.GetActiveScene().buildIndex; //set the level index to the currently loaded one
 
@@ -212,8 +212,6 @@ public class GameManager : Singleton<GameManager>
         Debug.Log("ReplayLevel");
 
         LoadLevel(currLevelIndex);
-
-        InitLevel();
     }
 
     private void LoadNextLevel()
@@ -222,6 +220,8 @@ public class GameManager : Singleton<GameManager>
 
         if (HasNextLevel())
         {
+            playerDeaths = 0;
+            playTime = 0;
             LoadLevel(currLevelIndex + 1);
         }
         else LoadLevel(0);
@@ -237,7 +237,10 @@ public class GameManager : Singleton<GameManager>
 
     private void PlayerRespawn()
     {
-        ChangeStage(0, currStage, playerRespawnPos);
+        ReplayLevel();
+        
+        //ChangeStage(0, currStage, playerRespawnPos);
+
         //playerPrefab.transform.position = playerRespawnPos;
         /*stageArray[currStageIndex].TryGetComponent(out IStage stageInterface);
         if (stageInterface != null)
