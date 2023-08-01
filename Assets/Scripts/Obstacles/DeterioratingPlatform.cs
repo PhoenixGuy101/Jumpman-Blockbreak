@@ -51,8 +51,12 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
         else if (leaveLeft > 0) damageStatus = 2;
         else { 
             damageStatus = 3;
-            Destroy(gameObject); //will need to play destroy animation
+            Crumble();
         }
-        
+    }
+
+    private void Crumble()
+    {
+        Destroy(gameObject); //will need to disappear or play a crumbling animation.
     }
 }

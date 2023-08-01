@@ -5,9 +5,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour, IProjectile
 {
     //fields
-    private Rigidbody2D rb;
-    private Vector2 velocity;
+    protected Rigidbody2D rb;
+    protected Vector2 velocity;
     protected bool isMoving;
+    private float rotation;
 
     void IProjectile.Setup(Vector2 projVelocity)
     {
@@ -15,27 +16,28 @@ public class Projectile : MonoBehaviour, IProjectile
         SetRotation();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (isMoving) rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
-    private void SetRotation()
+    protected virtual void SetRotation()
     {
         if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
         {
-            if (velocity.x > 0) rb.MoveRotation(0);
-            else rb.MoveRotation(180);
+            if (velocity.x > 0) rotation = 0;
+            else rotation = 180;
         }
         else
         {
-            if (velocity.y > 0) rb.MoveRotation(90);
-            else rb.MoveRotation(270);
+            if (velocity.y > 0) rotation = 90;
+            else rotation = 270;
         }
+        rb.MoveRotation(rotation);
     }
 }
