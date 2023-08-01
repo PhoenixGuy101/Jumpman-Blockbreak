@@ -132,8 +132,6 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
 
     #endregion
 
-    private string slottedAnimusCrystal = "ice";
-
     //method that is called whenever the player lands on a moving platform; sets player friction coefficient to 1
     void IPlayer.OnFriction(GameObject platform)
     {
@@ -397,38 +395,6 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
                     holdColliderObj.SetActive(true);                       //set the collider to be active now that the player is holding the object
                 }
             }
-        }
-    }
-
-    //method for using animus crystals based on what the player has slotted
-    private void OnUseAnimus(InputValue useAnimusValue)
-    {
-        switch (slottedAnimusCrystal)
-        {
-            case "neutral":
-                Debug.Log("Your crystal does not react");
-                break;
-            case "ice":
-                Debug.Log("You create an ice block");
-                break;
-            case "fire":
-                Debug.Log("You dash forward with flames trailing behind you");
-                break;
-            default:
-                Debug.Log("Nothing happens");
-                break;
-        }
-    }
-
-    //method to ditch the slotted animus crystal
-    private void OnDitchAnimus(InputValue ditchAnimusValue)
-    {
-        slottedAnimusCrystal = "none";
-        Debug.Log("You no longer have an Animus Crystal slotted");
-
-        if (!isGrounded)
-        {
-            Debug.Log("You get an extra jump for ditching your Animus Crystal");
         }
     }
 

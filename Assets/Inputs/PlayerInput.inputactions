@@ -42,24 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "UseAnimus",
-                    "type": "Button",
-                    "id": "0df041e4-cb64-4663-94f0-708f1054087a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "DitchAnimus",
-                    "type": "Button",
-                    "id": "15b9dfa7-a786-4f29-aaff-20e81e582adf",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "c42e4581-7b17-4218-9cce-e02569e46dca",
@@ -232,50 +214,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "GrabDrop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3654f6ea-1e88-49ae-89cf-9937d5128264",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "UseAnimus",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e0aca444-06ec-4682-a1d1-f7588ff80651",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "UseAnimus",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "111c948a-1d80-40d0-811a-339fd10a5c4b",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "DitchAnimus",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1cb65414-877a-471e-a874-260444b53eae",
-                    "path": "<Keyboard>/z",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DitchAnimus",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
