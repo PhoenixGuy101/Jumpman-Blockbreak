@@ -10717,12 +10717,28 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
+      propertyPath: doubleJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
+      propertyPath: jumpAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
       propertyPath: acceleration
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
+      propertyPath: coyoteTimeMax
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
       propertyPath: velControlPlat
       value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
+      propertyPath: additionalJumps
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5110961463702806290, guid: 269cfb7c6cef6d74b9e2ff7beb3b68ee, type: 3}
       propertyPath: modifyFallGravity

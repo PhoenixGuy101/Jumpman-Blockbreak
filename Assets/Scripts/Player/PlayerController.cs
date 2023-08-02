@@ -83,6 +83,10 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private Vector2 initialJumpVelocity;        //the force that the player jumps with; determined by gravity, time and final velocity at the precipice of the jump which is just 0.
     [Header("Jumping")]
     [SerializeField]
+    private bool additionalJumps;
+    [SerializeField]
+    private int jumpAmount;
+    [SerializeField]
     [Range(0.0f, 1.0f)]
     private float jumpCutMultiplier;            //the amount that the jump is cut off by if the player prematurely releases the jump button: 1 is 100% of the rest of the jump is cut, 0 is 0%
     [SerializeField]
@@ -99,6 +103,9 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private GroundedCheck groundCheck;          //A new class whose purpose is to check if the given player object is on the/a ground
     private bool isGrounded = true;             //player isGrounded
     private bool isJumping = false;             //player is holding/pressing the jump button and they get/have a positive Y velocity
+    private bool additionalJumpNext;
+    private bool additionalJumpExecuted;
+    private int jumpsLeft;
     #endregion
 
     #region JumpingHang
@@ -185,6 +192,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         facingRight = true;
         dirX = 0.0f;
         dirY = 0.0f;
+        jumpAmount = jumpAmount > 0 ? jumpAmount - 1 : 0;
 
         //the velocity of the jump as determined by the gravity and jump time (and final velocity which is 0)
         initialJumpVelocity = Vector2.up * -1 * Physics2D.gravity.y * jumpTimeLimit;
@@ -266,14 +274,19 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
 
             if (coyoteTimer < coyoteTimeMax) coyoteTimer = coyoteTimeMax; //coyote time reset to its max
 
-            if (isJumping) Jump(); //player pressing jump button triggers the jump, and the negative velocity requirement ensures that multiple jump triggers
-                                                            //don't occur with the grounded check collision box still overlapping with the ground at the beginning frames of the jump
+            if (isJumping) Jump();//player pressing jump button triggers the jump, and the negative velocity requirement ensures that multiple jump triggers
+                                    //don't occur with the grounded check collision box still overlapping with the ground at the beginning frames of the jump
         }
         else if (!isGrounded)
         {
             if (isCrouching) StopCrouching();                           //player stops crouching as they are not Grounded
+            if (additionalJumps && !isJumping) additionalJumpNext = true;
 
             if (coyoteTimer > 0 && isJumping) Jump();                   //player pressing jump button and coyote timer still having time determines if the player can jump midair
+            else if (isJumping && additionalJumps && additionalJumpNext && additionalJumpExecuted && jumpsLeft > 0)
+            {
+                Jump();
+            }
             else if (isJumping && rb.velocity.y <= 0) isJumping = false;//if jump button is pressed, but player is just falling, set isJumping to false
             else if (!isJumping && rb.velocity.y > 0) rb.AddForce(Vector2.down * rb.velocity.y * jumpCutMultiplier, ForceMode2D.Impulse); //if player lets go of the jump button early in their jump,
                                                                                                                                             //they prematurely fall depending on the jumpCutMultiplier
@@ -295,8 +308,14 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         #endregion
 
         isGrounded = groundCheck.TestForGrounded();                         //Test to see if the player is grounded to prime them for jumping/crouching next tick
-        
-        if (isGrounded) isJumping = false;
+
+        if (isGrounded) 
+        { 
+            isJumping = false;
+            additionalJumpNext = false;
+            additionalJumpExecuted = false;
+            jumpsLeft = jumpAmount;
+        }
         if (jumpBufferTimer > 0) jumpBufferTimer -= Time.fixedDeltaTime;    //Tick down jumpBufferTimer
     }
 
@@ -338,6 +357,10 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         {
             isJumping = true;
             jumpBufferTimer = jumpBuffer;
+            if (!isGrounded && !additionalJumpExecuted)
+            {
+                additionalJumpExecuted = true;
+            }
         }        
     }
     
@@ -443,6 +466,12 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         if (willJumpBoost) rb.AddForce(Vector2.right * targetVelocity * (isGrounded || isOnMovingPlatform ? jumpBoostMultiplier : jumpBoostCoyoteMultiplier), ForceMode2D.Impulse); //horizontal jump boost if enabled
         coyoteTimer = 0;        //coyote no longer possible/just executed
         jumpBufferTimer = 0;    //jumpBufferTimer turn off at start of jump as jump has just been executed
+        if (!additionalJumpExecuted) additionalJumpNext = true;
+        else
+        {
+            jumpsLeft--;
+            additionalJumpNext = false;
+        }
     }
     private void StopCrouching()
     {
