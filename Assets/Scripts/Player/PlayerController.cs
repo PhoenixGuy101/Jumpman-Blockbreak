@@ -165,12 +165,12 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
 
     private void OnEnable()
     {
-        LandTrigger.OnLanding += GetGroundFriction; //set up the get friction method upon OnLanding trigger
+        LandTrigger.OnLanding += Landing; //set up the Landing method which gets friction and goomba stomps enemies upon OnLanding trigger
     }
 
     private void OnDisable()
     {
-        LandTrigger.OnLanding -= GetGroundFriction; //remove the get friction method
+        LandTrigger.OnLanding -= Landing; //remove the Landing method
     }
 
     // Everything that needs to be set up prior to the player... playing
@@ -408,6 +408,16 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     {
         collision.TryGetComponent(out Rigidbody2D rbcol);
         if (rbcol != null) frictionAmount = rbcol.sharedMaterial.friction;                         //use the rigidbody to get the physics material friction
+    }
+    private void Landing(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.TryGetComponent(out IDamageable enemyDam);
+            if (enemyDam != null) enemyDam.Die();
+            Jump();
+        }
+        GetGroundFriction(collision);
     }
 
     //turns the player based on player horizontal movement input

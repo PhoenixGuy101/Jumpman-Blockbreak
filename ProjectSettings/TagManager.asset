@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Stage
   - Level
+  - Enemy
   layers:
   - Default
   - TransparentFX
