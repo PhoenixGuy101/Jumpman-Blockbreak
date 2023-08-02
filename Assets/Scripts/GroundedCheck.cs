@@ -17,12 +17,13 @@ public class GroundedCheck
         size = new Vector3(coll.bounds.size.x, coll.bounds.size.y, coll.bounds.size.z);
         rb = rigid;
         d = distance;
+        LayerMask lm = s.layer;
     }
     
     //the only method that is used outside of instantiation: used to test if the game object passed in is on the ground or not.
     public bool TestForGrounded()
     {
-        if (Physics2D.BoxCast(coll.bounds.center, size, 0.0f, Vector2.down, d) && rb.velocity.y <= 0) return true;
+        if (Physics2D.BoxCast(coll.bounds.center, size, 0.0f, Vector2.down, d, ~(1 << source.layer)) && rb.velocity.y <= 0) return true;
 
         else return false;
     }
