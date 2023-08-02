@@ -9,6 +9,7 @@ TagManager:
   - Stage
   - Level
   - Enemy
+  - PickUp
   layers:
   - Default
   - TransparentFX

@@ -425,13 +425,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     {
         GameManager.Instance.TogglePauseMenu();
     }
-
-    //method that triggers on the event for landing on a ground. It gets the friction value from the ground that gets artificially applied to the player
-    private void GetGroundFriction(Collider2D collision)
-    {
-        collision.TryGetComponent(out Rigidbody2D rbcol);
-        if (rbcol != null) frictionAmount = rbcol.sharedMaterial.friction;                         //use the rigidbody to get the physics material friction
-    }
+    //method that triggers on the event for landing on a surface
     private void Landing(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -442,6 +436,14 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         }
         GetGroundFriction(collision);
     }
+    
+    //method that gets the friction value from the ground that gets artificially applied to the player
+    private void GetGroundFriction(Collider2D collision)
+    {
+        collision.TryGetComponent(out Rigidbody2D rbcol);
+        if (rbcol != null) frictionAmount = rbcol.sharedMaterial.friction;                         //use the rigidbody to get the physics material friction
+    }
+    
 
     //turns the player based on player horizontal movement input
     private void Turn()
