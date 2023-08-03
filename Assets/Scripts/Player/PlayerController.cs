@@ -106,6 +106,15 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private bool additionalJumpNext;
     private bool additionalJumpExecuted;
     private int jumpsLeft;
+    [Header ("Jump Buff")]
+    [SerializeField]
+    private float jumpBuffMultiplier = 2;
+    private bool jumpBuff;
+    public bool playerJumpBuff
+    {
+        get { return jumpBuff; }
+        set { jumpBuff = value; }
+    }
     #endregion
 
     #region JumpingHang
@@ -139,6 +148,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
 
     #endregion
 
+    #region IPlayer
     //method that is called whenever the player lands on a moving platform; sets player friction coefficient to 1
     void IPlayer.OnFriction(GameObject platform)
     {
@@ -163,6 +173,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         platFriction = f;
         Debug.Log("platFriction: " + platFriction);
     }
+    #endregion
 
     void IDamageable.Die()
     {
@@ -319,6 +330,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         if (jumpBufferTimer > 0) jumpBufferTimer -= Time.fixedDeltaTime;    //Tick down jumpBufferTimer
     }
 
+    #region MovementInputs
     //Set the direction for horizontal movement based on an axis
     private void OnHorizontalMovement(InputValue movementValue)
     {
@@ -363,7 +375,11 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
             }
         }        
     }
-    
+
+    #endregion
+
+
+    #region Grabbing/Dropping
     //method for grabbing and dropping blocks
     private void OnGrabDrop(InputValue grabValue)
     {
@@ -420,11 +436,23 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
             }
         }
     }
+    #endregion
 
     private void OnPause()
     {
         GameManager.Instance.TogglePauseMenu();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PickUp"))
+        {
+            Debug.Log("PickUp triggered");
+            GameManager.Instance.CollectPickup(collision.gameObject);
+        }
+    }
+
+    #region LandingMethods
     //method that triggers on the event for landing on a surface
     private void Landing(Collider2D collision)
     {
@@ -443,7 +471,8 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         collision.TryGetComponent(out Rigidbody2D rbcol);
         if (rbcol != null) frictionAmount = rbcol.sharedMaterial.friction;                         //use the rigidbody to get the physics material friction
     }
-    
+    #endregion
+
 
     //turns the player based on player horizontal movement input
     private void Turn()
@@ -464,7 +493,10 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private void Jump()
     {
         if (rb.velocity.y < 0) rb.AddForce((-1 * rb.velocity), ForceMode2D.Impulse); //negates the negative velocity if needed
-        rb.AddForce(initialJumpVelocity, ForceMode2D.Impulse); //the jump itself
+        Vector2 appliedJumpVelocity = jumpBuff ? Vector2.up * Mathf.Sqrt(-2 * Physics2D.gravity.y * maxJumpHeight * jumpBuffMultiplier) : initialJumpVelocity;
+        //Debug.Log("jumpBuff: " + jumpBuff);
+        //Debug.Log("Jump Velocity: " + appliedJumpVelocity.y);
+        rb.AddForce(appliedJumpVelocity, ForceMode2D.Impulse); //the jump itself
         if (willJumpBoost) rb.AddForce(Vector2.right * targetVelocity * (isGrounded || isOnMovingPlatform ? jumpBoostMultiplier : jumpBoostCoyoteMultiplier), ForceMode2D.Impulse); //horizontal jump boost if enabled
         coyoteTimer = 0;        //coyote no longer possible/just executed
         jumpBufferTimer = 0;    //jumpBufferTimer turn off at start of jump as jump has just been executed

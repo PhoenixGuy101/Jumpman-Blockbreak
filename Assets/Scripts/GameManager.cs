@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
+public enum PickUpType { None, JumpHeightBuff, TimeFreezeBuff };
+
 public class GameManager : Singleton<GameManager>
 {
     //fields
@@ -40,6 +43,19 @@ public class GameManager : Singleton<GameManager>
     private float jumpTime;     //jump time set in the inspector
     private float playTime;
     private int playerDeaths;
+    #endregion
+
+    #region PickUpStuff
+    private PickUpType activePickUp;
+    private float pickUpTimer;
+    private List<IFreezeable> freezeables = new();
+    public IFreezeable freezableManager
+    {
+        set { 
+            freezeables.Add((IFreezeable)value);
+            Debug.Log(freezeables.Count);
+        }
+    }
     #endregion
 
     #region UIProperties
@@ -89,11 +105,6 @@ public class GameManager : Singleton<GameManager>
         playTime = 0;
     }
 
-    private void Update()
-    {
-        if(!winMenu.activeInHierarchy) playTime += Time.deltaTime;
-    }
-
     private void LoadLevel(int levelIndexToLoad)
     {
         SceneManager.sceneLoaded += OnLevelLoaded;
@@ -108,6 +119,20 @@ public class GameManager : Singleton<GameManager>
         InitLevel();
     }
     #endregion
+
+    private void Update()
+    {
+        if (!winMenu.activeInHierarchy) playTime += Time.deltaTime;
+        if (activePickUp != PickUpType.None)
+        {
+            if (pickUpTimer > 0)
+            { 
+                pickUpTimer -= Time.deltaTime;
+                //Debug.Log("Buff Timer: " + pickUpTimer);
+            }
+            else EndBuffs();
+        }
+    }
 
     #region Levels&Stages
     private void InitLevel()
@@ -135,6 +160,8 @@ public class GameManager : Singleton<GameManager>
             playerController = playerPrefab.GetComponent<PlayerController>();
             playerController.playerJumpHeight = jumpHeight; //communicate to the player controller the set jump height and time
             playerController.playerJumpTime = jumpTime;
+
+            //freezeables = (GameObject[])GameObject.FindObjectsOfType(typeof(IFreezeable));
 
             if (stageArray.Length >= 1) InitStage(0); //initialize stage 0 if there's at least 1 stage present
         }
@@ -195,7 +222,7 @@ public class GameManager : Singleton<GameManager>
         else ChangeStage(0, currStage, playerRespawnPos);
     }
 
-    #endregion
+    
     private void WinLevel()
     {
         ShowWinMenu();
@@ -214,6 +241,7 @@ public class GameManager : Singleton<GameManager>
         LoadLevel(currLevelIndex);
     }
 
+
     private void LoadNextLevel()
     {
         Debug.Log("LoadingNextLevel");
@@ -226,6 +254,7 @@ public class GameManager : Singleton<GameManager>
         }
         else LoadLevel(0);
     }
+    #endregion
 
     private void QuitGame()
     {
@@ -350,5 +379,64 @@ public class GameManager : Singleton<GameManager>
         else if (seconds < 10) secText = "0" + seconds;
         else secText = seconds.ToString();
         return minText + ":" + secText;
+    }
+
+    public void CollectPickup(GameObject pickUpObject)
+    {
+        pickUpObject.TryGetComponent(out PickUp pickUp);
+        if (pickUp != null)
+        {
+            PickUpType pickUpType = pickUp.pickType;
+            switch (pickUpType)
+            {
+                case PickUpType.None:
+                    break;
+                case PickUpType.JumpHeightBuff:
+                    EndBuffs();
+                    activePickUp = PickUpType.JumpHeightBuff;
+                    pickUpTimer = pickUp.pickUpEffectDuration;
+                    playerController.playerJumpBuff = true;
+                    Debug.Log("Jump Buff Picked Up");
+                    break;
+                case PickUpType.TimeFreezeBuff:
+                    EndBuffs();
+                    activePickUp = PickUpType.TimeFreezeBuff;
+                    pickUpTimer = pickUp.pickUpEffectDuration;
+                    foreach (IFreezeable i in freezeables)
+                    {
+                        //i.TryGetComponent(out IFreezeable interFreeze);
+                        //if (interFreeze != null) interFreeze.Freeze();
+                        i.Freeze();
+                        Debug.Log("FreezeObject: " + i);
+                    }
+                    break;
+            }
+        }
+        Destroy(pickUpObject);
+    }
+    public void EndBuffs()
+    {
+        switch (activePickUp)
+        {
+            case PickUpType.None:
+                break;
+            case PickUpType.JumpHeightBuff:
+                playerController.playerJumpBuff = false;
+                activePickUp = PickUpType.None;
+                break;
+            case PickUpType.TimeFreezeBuff:
+                activePickUp = PickUpType.None;
+                foreach (IFreezeable i in freezeables)
+                {
+                    //i.TryGetComponent(out IFreezeable interFreeze);
+                    //if (interFreeze != null) interFreeze.UnFreeze();
+                    i.UnFreeze();
+                }
+                break;
+        }
+    }
+    public void RemoveFreezable(IFreezeable toRemove)
+    {
+        freezeables.Remove(toRemove);
     }
 }

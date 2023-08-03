@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public enum PickUpType { JumpHeightBuff, TimeFreezeBuff};
-
     //fields
     [SerializeField]
     private PickUpType type;
