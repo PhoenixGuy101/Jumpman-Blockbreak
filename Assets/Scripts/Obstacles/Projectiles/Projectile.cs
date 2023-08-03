@@ -8,6 +8,7 @@ public class Projectile : FreezeableFunctionality, IProjectile
     protected Rigidbody2D rb;
     protected Vector2 velocity;
     private float rotation;
+    protected bool isMoving;
 
     void IProjectile.Setup(Vector2 projVelocity)
     {
@@ -22,7 +23,7 @@ public class Projectile : FreezeableFunctionality, IProjectile
 
     protected virtual void FixedUpdate()
     {
-        if (!base.isFrozen) rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        if (!base.isFrozen && isMoving) rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
     protected virtual void SetRotation()
     {
