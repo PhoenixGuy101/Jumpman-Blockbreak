@@ -6,4 +6,5 @@ public interface IFreezeable
 {
     public void Freeze();
     public void UnFreeze();
+    public void Remove();
 }

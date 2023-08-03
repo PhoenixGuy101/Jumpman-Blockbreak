@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkingEnemy : MonoBehaviour, IDamageable, IWalking, IFreezeable
+public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking
 {
     //fields
     private Rigidbody2D rb;
-
-    private IFreezeable freezeableInterface;
 
     [SerializeField]
     private bool enemyMoves = true;
@@ -52,27 +50,15 @@ public class WalkingEnemy : MonoBehaviour, IDamageable, IWalking, IFreezeable
         WallBump();
     }
 
-    void IFreezeable.Freeze()
-    {
-        enemyMoves = false;
-    }
-
-    void IFreezeable.UnFreeze()
-    {
-        enemyMoves = true;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        freezeableInterface = gameObject.GetComponent<IFreezeable>();
-        GameManager.Instance.freezableManager = freezeableInterface;
     }
 
     private void FixedUpdate()
     {
-        if (enemyMoves)
+        if (enemyMoves && !base.isFrozen)
         {
             targetVelocity = facingRight ? moveSpeed : -moveSpeed;
             speedDif = targetVelocity - rb.velocity.x;
@@ -80,11 +66,6 @@ public class WalkingEnemy : MonoBehaviour, IDamageable, IWalking, IFreezeable
             movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
             rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
         }
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.Instance.RemoveFreezable(freezeableInterface);
     }
 
 

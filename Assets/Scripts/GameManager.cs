@@ -258,6 +258,10 @@ public class GameManager : Singleton<GameManager>
 
     private void QuitGame()
     {
+        foreach (IFreezeable i in freezeables)
+        {
+            i.Remove();
+        }
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
