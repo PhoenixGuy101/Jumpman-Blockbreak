@@ -14,9 +14,13 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
     private float shootTimer;
     [SerializeField]
     private GameObject arrowPrefab;
+    [SerializeField]
+    private bool hasFired;
     private Direction fireDirection;
     private Vector3 arrowTransform;
     private GameObject instArrow;
+    [SerializeField]
+    private Animator animator;
 
     void IObstacle.Reset()
     {
@@ -43,16 +47,30 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
 
     private void FixedUpdate()
     {
-        if (shootTimer > 0 && !isFrozen) shootTimer -= Time.fixedDeltaTime;
-        else if (!base.isFrozen)
+        if (shootTimer > 0 && !isFrozen)
+        {
+            shootTimer -= Time.fixedDeltaTime;
+            animator.SetFloat("shootDelay", shootTimer);
+        }
+        else if (!isFrozen && hasFired)
         {
             ShootArrow(); //will have to trigger an animation instead, which then triggers the actual shooting of the arrow upon completion.
-            
+
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.TryGetComponent(out IDamageable pDam);
+            if (pDam != null) pDam.Die();
         }
     }
 
     private void ShootArrow()
     {
+        hasFired = false;
         instArrow = Instantiate(arrowPrefab, arrowTransform, Quaternion.identity) as GameObject;
         instArrow.gameObject.TryGetComponent(out IProjectile iProj);
         if (iProj != null)
@@ -99,5 +117,6 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
     private void ReloadDelay()
     {
         shootTimer = shootDelay;
+        animator.SetFloat("shootDelay", shootTimer);
     }
 }

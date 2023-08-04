@@ -25,6 +25,13 @@ public class Arrow : Projectile, IProjectile, IObstacle, IFreezeable
             collision.gameObject.TryGetComponent(out IDamageable pInterface);
             if (pInterface != null) pInterface.Die();
         }
+        else if (collision.gameObject.CompareTag("Deteriorates"))
+        {
+            isMoving = false;
+            collision.gameObject.TryGetComponent(out IDeteriorate deterInter);
+            if (deterInter != null) deterInter.deteriorate();
+            Disappear();
+        }
         else
         {
             Disappear();
@@ -34,6 +41,5 @@ public class Arrow : Projectile, IProjectile, IObstacle, IFreezeable
     protected override void Disappear()
     {
         base.Disappear();
-        Debug.Log("Arrow Disappear");
     }
 }

@@ -59,7 +59,7 @@ public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFre
 
     private void FixedUpdate()
     {
-        if (enemyMoves && !base.isFrozen)
+        if (enemyMoves && !isFrozen)
         {
             targetVelocity = facingRight ? moveSpeed : -moveSpeed;
             speedDif = targetVelocity - rb.velocity.x;
