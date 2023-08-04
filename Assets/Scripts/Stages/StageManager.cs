@@ -40,7 +40,7 @@ public class StageManager : MonoBehaviour, IStage
         foreach (Transform child in obstacleChild.transform)
         {
             child.gameObject.TryGetComponent(out ResetOnLeave leave); //reset the obstacle only if its ResetOnLeave script has willResetOnLeave true
-            if (leave.willResetOnLeave)
+            if (leave != null && leave.willResetOnLeave)
             {
                 child.gameObject.TryGetComponent(out IObstacle obs);
                 if (obs != null)

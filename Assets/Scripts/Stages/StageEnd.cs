@@ -12,13 +12,32 @@ public class StageEnd : MonoBehaviour
     public static event LevelFinished OnPlayerReachingEnd;
 
     [SerializeField]
-    private int[] stageIndex;   //array of the stages the exit connects to
-
-    [SerializeField]
     private bool isLevelEnd;
 
     [SerializeField]
+    private int[] stageIndex;   //array of the stages the exit connects to
+
+    [SerializeField]
     private Vector3[] playerPositions;  //array of the positions that the player should be when they are switching to one of the stages listed in the stageIndex array
+
+    private Rigidbody2D rb;
+    private float revSpeed = 10;
+
+    private void Start()
+    {
+        if (isLevelEnd)
+        {
+            rb = gameObject.GetComponent<Rigidbody2D>();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isLevelEnd)
+        {
+            rb.MoveRotation(rb.rotation + revSpeed * Time.fixedDeltaTime);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

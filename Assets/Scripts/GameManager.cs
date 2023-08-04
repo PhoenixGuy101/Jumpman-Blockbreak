@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
-public enum PickUpType { None, JumpHeightBuff, TimeFreezeBuff };
-
 public class GameManager : Singleton<GameManager>
 {
     //fields
@@ -194,7 +192,7 @@ public class GameManager : Singleton<GameManager>
         playerPrefab.transform.position = playerPos;
         InitStage(entering);
         stageArray[exiting].TryGetComponent(out IStage exitStage);
-        if (exitStage != null) exitStage.LeaveStage();
+        if (exitStage != null && entering != exiting) exitStage.LeaveStage();
     }
 
     private void SetStagesInactive() //listens to an event from LevelLoadCallback that runs just after the start function has executed

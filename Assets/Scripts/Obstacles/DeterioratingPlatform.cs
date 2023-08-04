@@ -42,7 +42,7 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            playerOn = true;
+            if (collision.transform.position.y > gameObject.transform.position.y + 1f) playerOn = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
