@@ -20,13 +20,23 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
 
     void IObstacle.Reset()
     {
+        if (!isFrozen) ReloadDelay();
+    }
 
+    private void OnEnable()
+    {
+        StageEnd.OnPlayerReachingEnd += ReloadDelay;
+    }
+
+    private void OnDisable()
+    {
+        StageEnd.OnPlayerReachingEnd -= ReloadDelay;
     }
 
     protected override void Start()
     {
         base.Start();
-        shootTimer = shootDelay;
+        ReloadDelay();
         SetDirection();
         SetArrowTransform();
     }
@@ -36,7 +46,6 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
         if (shootTimer > 0 && !isFrozen) shootTimer -= Time.fixedDeltaTime;
         else if (!base.isFrozen)
         {
-            shootTimer = shootDelay;
             ShootArrow(); //will have to trigger an animation instead, which then triggers the actual shooting of the arrow upon completion.
             
         }
@@ -50,7 +59,7 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
         {
             iProj.Setup(arrowSpeed, arrowLifeSpan);
         }
-        //shootTimer = shootDelay;
+        ReloadDelay();
     }
 
     private void SetDirection()
@@ -85,5 +94,10 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
                 break;
         }
         Debug.Log("arrowTransform: " + arrowTransform);
+    }
+
+    private void ReloadDelay()
+    {
+        shootTimer = shootDelay;
     }
 }

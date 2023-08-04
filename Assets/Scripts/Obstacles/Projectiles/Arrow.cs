@@ -6,6 +6,17 @@ public class Arrow : Projectile, IProjectile, IObstacle, IFreezeable
 {
     //fields
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        StageEnd.OnPlayerReachingEnd += Disappear;
+    }
+
+    private void OnDisable()
+    {
+        StageEnd.OnPlayerReachingEnd -= Disappear;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

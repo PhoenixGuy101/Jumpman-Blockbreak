@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFreezeable
+public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFreezeable, IObstacle
 {
     //fields
     private Rigidbody2D rb;
@@ -12,9 +12,9 @@ public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFre
     [SerializeField]
     private bool facingRight = true;
     [SerializeField]
-    private float moveSpeed = 7.0f;        //speed moving across the X axis
+    private float moveSpeed = 3.0f;        //speed moving across the X axis
     [SerializeField]
-    private float acceleration = 5.0f;      //acceleration to acheive target speed
+    private float acceleration = 7.0f;      //acceleration to acheive target speed
     [SerializeField]
     private float decceleration = 7.0f;    //decceleration to slow down to target speed, or to slow down if they're going too fast
     [SerializeField]
@@ -25,14 +25,14 @@ public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFre
     private float accelRate;
     private float movement;
 
-    [ExecuteInEditMode] private void OnValidate()
+    void IObstacle.Reset()
     {
-        Turn();
+
     }
 
     void IDamageable.Die()
     {
-
+        Destroy(gameObject);
     }
     
     /* IWalking is an interface that is interacted with via a child gameobject containing a trigger box

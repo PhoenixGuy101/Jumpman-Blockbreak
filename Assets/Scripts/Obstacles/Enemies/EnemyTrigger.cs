@@ -22,6 +22,6 @@ public class EnemyTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) parentInterface.OnPlayerHit(collision.gameObject);
         
-        else parentInterface.OnWallBump();
+        else if (!collision.gameObject.CompareTag("Enemy")) parentInterface.OnWallBump();
     }
 }

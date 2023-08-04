@@ -51,7 +51,7 @@ public class GameManager : Singleton<GameManager>
     {
         set { 
             freezeables.Add((IFreezeable)value);
-            Debug.Log(freezeables.Count);
+            //Debug.Log(freezeables.Count);
         }
     }
     #endregion
@@ -126,7 +126,7 @@ public class GameManager : Singleton<GameManager>
             if (pickUpTimer > 0)
             { 
                 pickUpTimer -= Time.deltaTime;
-                Debug.Log("Buff Timer: " + pickUpTimer);
+                //Debug.Log("Buff Timer: " + pickUpTimer);
             }
             else EndBuffs();
         }
@@ -158,8 +158,6 @@ public class GameManager : Singleton<GameManager>
             playerController = playerPrefab.GetComponent<PlayerController>();
             playerController.playerJumpHeight = jumpHeight; //communicate to the player controller the set jump height and time
             playerController.playerJumpTime = jumpTime;
-
-            //freezeables = (GameObject[])GameObject.FindObjectsOfType(typeof(IFreezeable));
 
             if (stageArray.Length >= 1) InitStage(0); //initialize stage 0 if there's at least 1 stage present
         }
@@ -214,6 +212,7 @@ public class GameManager : Singleton<GameManager>
     private void ReachedEnd()
     {
         cycleCurr--;
+        EndBuffs();
         Debug.Log("cycleCurr: " + cycleCurr);
         //update ui
         if (cycleCurr <= 0) WinLevel();

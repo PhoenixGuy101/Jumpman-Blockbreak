@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     [SerializeField]
     private float jumpBuffMultiplier = 2;
     private bool jumpBuff;
+    private float jumpBuffHeight;
     public bool playerJumpBuff
     {
         get { return jumpBuff; }
@@ -222,7 +223,9 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         isOnMovingPlatform = false;             
         coll.sharedMaterial = defaultMaterial;              //make sure the collision box's physics material is set up properly
         holdColliderCol.sharedMaterial = defaultMaterial;   //likewise for the child object, HoldingCollider. Make sure to set the collision box's physics material properly
-        
+
+        jumpBuffHeight = Mathf.Sqrt(-2 * Physics2D.gravity.y * maxJumpHeight * jumpBuffMultiplier);
+
         //debugs
         Debug.Log("initialJumpVelocity: " + initialJumpVelocity.y);
         Debug.Log("gravity: " + Physics2D.gravity.y);
@@ -502,8 +505,9 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private void Jump()
     {
         if (!isGrounded) rb.gravityScale = gravityScaleDefault;
+        Debug.Log(jumpBuff);
         rb.AddForce(rb.velocity.y * Vector2.down, ForceMode2D.Impulse); //negates excessive y velocity if needed
-        Vector2 appliedJumpVelocity = jumpBuff ? Vector2.up * Mathf.Sqrt(-2 * Physics2D.gravity.y * maxJumpHeight * jumpBuffMultiplier) : initialJumpVelocity;
+        Vector2 appliedJumpVelocity = jumpBuff ? Vector2.up * jumpBuffHeight : initialJumpVelocity;
         //Debug.Log("jumpBuff: " + jumpBuff);
         //Debug.Log("Jump Velocity: " + appliedJumpVelocity.y);
         rb.AddForce(appliedJumpVelocity, ForceMode2D.Impulse); //the jump itself
