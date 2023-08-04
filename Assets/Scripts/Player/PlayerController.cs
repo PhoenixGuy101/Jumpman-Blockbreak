@@ -501,7 +501,8 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     //the jump method that propels the player
     private void Jump()
     {
-        if (rb.velocity.y < 0) rb.AddForce((-1 * rb.velocity), ForceMode2D.Impulse); //negates the negative velocity if needed
+        if (!isGrounded) rb.gravityScale = gravityScaleDefault;
+        rb.AddForce(rb.velocity.y * Vector2.down, ForceMode2D.Impulse); //negates excessive y velocity if needed
         Vector2 appliedJumpVelocity = jumpBuff ? Vector2.up * Mathf.Sqrt(-2 * Physics2D.gravity.y * maxJumpHeight * jumpBuffMultiplier) : initialJumpVelocity;
         //Debug.Log("jumpBuff: " + jumpBuff);
         //Debug.Log("Jump Velocity: " + appliedJumpVelocity.y);

@@ -109,7 +109,7 @@ MonoBehaviour:
   limitAerialTurning: 0
   willJumpBoost: 1
   jumpBoostMultiplier: 0.25
-  jumpBoostCoyoteMultiplier: 1
+  jumpBoostCoyoteMultiplier: 0.25
   defaultMaterial: {fileID: 6200000, guid: 7a0971d031696cb418179f4506aaaf78, type: 2}
   platformMaterial: {fileID: 6200000, guid: e3501b25c7e436c4e86e423611944ac5, type: 2}
   additionalJumps: 0
