@@ -8641,11 +8641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3400241590092508304, guid: e21071909056a4f4596a90335bf7fee8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.3583364
+      value: 8.03
       objectReference: {fileID: 0}
     - target: {fileID: 3400241590092508304, guid: e21071909056a4f4596a90335bf7fee8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0226513
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 3400241590092508304, guid: e21071909056a4f4596a90335bf7fee8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8694,11 +8694,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1750777342}
+  - component: {fileID: 1750777347}
+  - component: {fileID: 1750777346}
   - component: {fileID: 1750777345}
   - component: {fileID: 1750777344}
   - component: {fileID: 1750777343}
-  - component: {fileID: 1750777347}
-  - component: {fileID: 1750777346}
   m_Layer: 0
   m_Name: ArrowShooter
   m_TagString: Untagged
@@ -8737,7 +8737,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ba0cfb55200620745bbdd0436d06df55, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -8751,7 +8751,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1750777341}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 321443539a30f864a9733fcf9185cb2b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -8845,7 +8845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80140c66fc377747a2a38adebe4fe0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: {x: -10, y: 0}
+  arrowSpeed: {x: -6, y: 0}
+  arrowLifeSpan: 10
   shootDelay: 2
   arrowPrefab: {fileID: 4620575705764770044, guid: 13a265423b2450444a406735b94cbb01, type: 3}
 --- !u!4 &1775254350 stripped

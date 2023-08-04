@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IProjectile
 {
-    void Setup(Vector2 velocity);
+    void Setup(Vector2 velocity, float lifeSpan);
 }

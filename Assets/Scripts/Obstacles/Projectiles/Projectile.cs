@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : FreezeableFunctionality, IProjectile, IObstacle
+public class Projectile : FreezeableFunctionality, IProjectile, IObstacle, IFreezeable
 {
     //fields
     protected Rigidbody2D rb;
     protected Vector2 velocity;
-    private float rotation;
+    protected float rotation;
+    protected float lifeSpan;
     protected bool isMoving;
 
     void IObstacle.Reset()
@@ -15,42 +16,54 @@ public class Projectile : FreezeableFunctionality, IProjectile, IObstacle
         
     }
 
-    void IProjectile.Setup(Vector2 projVelocity)
+    void IProjectile.Setup(Vector2 projVelocity, float projLifespan)
     {
-        Debug.Log("Got to Setup()");
         velocity = projVelocity;
-        Debug.Log("Velocity set");
+        lifeSpan = projLifespan;
         SetRotation();
-        Debug.Log("Rotation Done");
         isMoving = true;
     }
 
-    protected virtual void Start()
+    protected virtual void OnEnable()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        Debug.Log("rigidbody: " + rb);
+        Debug.Log("Arrow Position: " + transform.position);
         isMoving = false;
+    }
+    
+    protected override void Start()
+    {
+        base.Start();
     }
 
     protected virtual void FixedUpdate()
     {
-        if (!base.isFrozen && isMoving) rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        if (!base.isFrozen && isMoving)
+        {
+            rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+            if (lifeSpan >= 0) lifeSpan -= Time.fixedDeltaTime;
+            else Disappear();
+        }
     }
-    protected void SetRotation()
+    private void SetRotation()
     {
-        Debug.Log("In SetRotation()");
         if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
         {
-            Debug.Log("Left/Right");
             if (velocity.x > 0) rotation = 0;
             else rotation = 180;
         }
         else
         {
-            Debug.Log("Up/Down");
             if (velocity.y > 0) rotation = 90;
             else rotation = 270;
         }
-        Debug.Log("Just before MoveRotation");
         rb.MoveRotation(rotation);
+    }
+
+    protected virtual void Disappear()
+    {
+        isMoving = false;
+        Destroy(gameObject); //will need to play a fading animation or something similar
     }
 }

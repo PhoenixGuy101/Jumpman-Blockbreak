@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowShooter : FreezeableFunctionality, IObstacle
+public class ArrowShooter : FreezeableFunctionality, IObstacle, IFreezeable
 {
 
     [SerializeField]
     private Vector2 arrowSpeed;
+    [SerializeField]
+    private float arrowLifeSpan = 10;
     [SerializeField]
     private float shootDelay = 2;
     private float shootTimer;
@@ -21,9 +23,12 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle
 
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         shootTimer = shootDelay;
+        SetDirection();
+        SetArrowTransform();
     }
 
     private void FixedUpdate()
@@ -43,7 +48,7 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle
         instArrow.gameObject.TryGetComponent(out IProjectile iProj);
         if (iProj != null)
         {
-            iProj.Setup(arrowSpeed);
+            iProj.Setup(arrowSpeed, arrowLifeSpan);
         }
         //shootTimer = shootDelay;
     }
@@ -67,17 +72,18 @@ public class ArrowShooter : FreezeableFunctionality, IObstacle
         switch (fireDirection)
         {
             case Direction.right:
-                arrowTransform = transform.position + (1 * Vector3.right);
+                arrowTransform = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y, gameObject.transform.position.z);
                 break;
             case Direction.left:
-                arrowTransform = transform.position - (1 * Vector3.right);
+                arrowTransform = new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y, gameObject.transform.position.z);
                 break;
             case Direction.up:
-                arrowTransform = transform.position + (1 * Vector3.up);
+                arrowTransform = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, gameObject.transform.position.z);
                 break;
             case Direction.down:
-                arrowTransform = transform.position - (1 * Vector3.up);
+                arrowTransform = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 1, gameObject.transform.position.z);
                 break;
         }
+        Debug.Log("arrowTransform: " + arrowTransform);
     }
 }

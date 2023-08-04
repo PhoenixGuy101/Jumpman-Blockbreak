@@ -22,7 +22,7 @@ public class FreezeableFunctionality : MonoBehaviour, IFreezeable
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         freezeInterface = gameObject.GetComponent<IFreezeable>();
         GameManager.Instance.freezableManager = freezeInterface;

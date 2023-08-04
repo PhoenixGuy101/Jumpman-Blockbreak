@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking
+public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFreezeable
 {
     //fields
     private Rigidbody2D rb;
@@ -51,8 +51,9 @@ public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking
     }
 
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
+        base.Start();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
