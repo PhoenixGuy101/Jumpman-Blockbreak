@@ -68,6 +68,14 @@ public class GameManager : Singleton<GameManager>
     private TMP_Text timePlayedText;
     [SerializeField]
     private TMP_Text deathNumText;
+
+    #region UIAnimations
+    [Header("UIAnimations")]
+    [SerializeField]
+    private Animator crossfade;
+
+    #endregion
+
     #endregion
 
     #region StartingMethods
@@ -161,7 +169,9 @@ public class GameManager : Singleton<GameManager>
 
             if (stageArray.Length >= 1) InitStage(0); //initialize stage 0 if there's at least 1 stage present
         }
-        
+        crossfade.SetBool("LevelEnded", false);
+        crossfade.SetBool("LevelLoaded", true);
+
     }
     private void InitStage(int index)
     {
@@ -235,6 +245,8 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log("ReplayLevel");
 
+        crossfade.SetBool("LevelLoaded", false);
+        crossfade.SetBool("LevelEnded", true);
         LoadLevel(currLevelIndex);
     }
 
@@ -247,6 +259,8 @@ public class GameManager : Singleton<GameManager>
         {
             playerDeaths = 0;
             playTime = 0;
+            crossfade.SetBool("LevelLoaded", false);
+            crossfade.SetBool("LevelEnded", true);
             LoadLevel(currLevelIndex + 1);
         }
     }

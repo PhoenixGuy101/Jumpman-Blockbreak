@@ -254,6 +254,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3002676577400251237, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990972657648972418, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4078795674497846300, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9056,6 +9088,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 407927701}
     m_Modifications:
+    - target: {fileID: 8781681010817258469, guid: 8799169e3b060c54e983f75f15130b4f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781681010817258469, guid: 8799169e3b060c54e983f75f15130b4f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1263712887
+      objectReference: {fileID: 0}
     - target: {fileID: 8781681010817258470, guid: 8799169e3b060c54e983f75f15130b4f, type: 3}
       propertyPath: m_Name
       value: Spikes

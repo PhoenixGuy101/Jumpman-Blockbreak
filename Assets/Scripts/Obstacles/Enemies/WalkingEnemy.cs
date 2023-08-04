@@ -61,12 +61,18 @@ public class WalkingEnemy : FreezeableFunctionality, IDamageable, IWalking, IFre
     {
         if (enemyMoves && !isFrozen)
         {
+            if (rb.bodyType != RigidbodyType2D.Dynamic) rb.bodyType = RigidbodyType2D.Dynamic;
             targetVelocity = facingRight ? moveSpeed : -moveSpeed;
             speedDif = targetVelocity - rb.velocity.x;
             accelRate = (Mathf.Abs(rb.velocity.x) <= moveSpeed) ? acceleration : decceleration;
             movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
             rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
         }
+        else if (isFrozen)
+        {
+            if (rb.bodyType != RigidbodyType2D.Static) rb.bodyType = RigidbodyType2D.Static;
+        }
+        else { if (rb.bodyType != RigidbodyType2D.Dynamic) rb.bodyType = RigidbodyType2D.Dynamic; }
     }
 
 
