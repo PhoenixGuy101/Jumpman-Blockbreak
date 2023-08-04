@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private Collider2D coll;
     public PlayerInput playerInput;
 
+    //animation
+    [SerializeField]
+    private Animator animator;
+
     #region HorizontalMovementFields
     [Header("Movement")]
     [SerializeField]
@@ -328,6 +332,11 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
             jumpsLeft = jumpAmount;
         }
         if (jumpBufferTimer > 0) jumpBufferTimer -= Time.fixedDeltaTime;    //Tick down jumpBufferTimer
+
+        #region Animations
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("isGrounded", isGrounded);
+        #endregion
     }
 
     #region MovementInputs

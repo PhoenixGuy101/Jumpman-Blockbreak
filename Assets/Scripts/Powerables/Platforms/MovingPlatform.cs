@@ -85,10 +85,14 @@ public class MovingPlatform : PowerableParent, IObstacle
             travelTime = platTravelDist / speed;
             velocity = (pathPositions[currMoveGoal].x - pathPositions[prevMoveGoal].x) / travelTime;
             Debug.Log(velocity);
-            foreach (IPlayer player in playersOnPlat)
+            if (playersOnPlat != null)
             {
-                player.UpdateFriction(platformVelocity);
+                foreach (IPlayer player in playersOnPlat)
+                {
+                    player.UpdateFriction(platformVelocity);
+                }
             }
+            
         }
     }
 

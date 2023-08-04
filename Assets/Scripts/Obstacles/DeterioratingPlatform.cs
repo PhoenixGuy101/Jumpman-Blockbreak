@@ -8,8 +8,15 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     [SerializeField]
     private int leaveTotal = 3; //how many times the player can land and leave the platform before it is destroyed (editable in the inspector)
     private int leaveLeft;      //a tracker for how many times the player has left the platform
-    private int damageStatus = 0; //will be changed to be the sprite selection
     private bool playerOn;      //a variable to confirm the player landed on the platform.
+
+    private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private Sprite healthySprite;
+    [SerializeField]
+    private Sprite damagedSprite;
+    [SerializeField]
+    private Sprite destroyedSprite;
     
     void IObstacle.Reset()
     {
@@ -26,6 +33,9 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     {
         leaveLeft = leaveTotal;
         playerOn = false;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = healthySprite;
+        Debug.Log("Block Health: " + leaveLeft);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,16 +57,25 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     private void LoseState()
     {
         leaveLeft--;
-        if (leaveTotal / leaveLeft > .5) damageStatus = 1;
-        else if (leaveLeft > 0) damageStatus = 2;
-        else { 
-            damageStatus = 3;
-            Crumble();
+        Debug.Log("Block Health: " + leaveLeft);
+        if (((float)leaveLeft) / ((float)leaveTotal) > .5) spriteRenderer.sprite = damagedSprite;
+        else if (leaveLeft > 0) spriteRenderer.sprite = destroyedSprite;
+        else
+        {
+            StartCoroutine(Crumble());
         }
     }
 
-    private void Crumble()
+    private IEnumerator Crumble()
     {
+        Color c = spriteRenderer.color;
+        for (float alpha = 1f; alpha >= 0; alpha -= 0.01f)
+        {
+            c.a = alpha;
+            spriteRenderer.color = c;
+            Debug.Log("Alpha: " + alpha);
+            yield return null;
+        }
         Destroy(gameObject); //will need to disappear or play a crumbling animation.
     }
 }

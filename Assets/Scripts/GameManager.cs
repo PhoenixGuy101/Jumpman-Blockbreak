@@ -128,7 +128,7 @@ public class GameManager : Singleton<GameManager>
             if (pickUpTimer > 0)
             { 
                 pickUpTimer -= Time.deltaTime;
-                //Debug.Log("Buff Timer: " + pickUpTimer);
+                Debug.Log("Buff Timer: " + pickUpTimer);
             }
             else EndBuffs();
         }
@@ -252,7 +252,11 @@ public class GameManager : Singleton<GameManager>
             playTime = 0;
             LoadLevel(currLevelIndex + 1);
         }
-        else LoadLevel(0);
+    }
+
+    private void GoToMainMenu()
+    {
+        LoadLevel(0);
     }
     #endregion
 
@@ -335,7 +339,7 @@ public class GameManager : Singleton<GameManager>
         
         timePlayedText.text = "Time: " + GetCurrentTime();
         deathNumText.text = "Deaths: " + playerDeaths;
-        //nextLvlBtn.SetActive(HasNextLevel()); //not necessary, as the button is now set to go to the menu if there are no more levels left
+        nextLvlBtn.SetActive(HasNextLevel()); //not necessary, as the button is now set to go to the menu if there are no more levels left
         playerController.playerInput.SwitchCurrentActionMap("UI");
         Cursor.visible = true;
     }
@@ -366,6 +370,11 @@ public class GameManager : Singleton<GameManager>
     public void OnNextLvlBtnClick()
     {
         LoadNextLevel();
+    }
+
+    public void OnMainMenuBtnClick()
+    {
+        GoToMainMenu();
     }
     #endregion
     #endregion

@@ -48,10 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7186eca756a8f12469f9245ed30376ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPos: {x: 0, y: 0, z: 0}
-  cameraSize: 0
   index: 0
-  playerStart: {x: 0, y: 0, z: 0}
+  cameraPos: {x: 0, y: 0, z: -10}
+  cameraSize: 5
 --- !u!1 &1776317993227475275
 GameObject:
   m_ObjectHideFlags: 0
