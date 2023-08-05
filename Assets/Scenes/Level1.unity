@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 539715012697540549, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 694534905430584012, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -146,6 +150,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1283590950299035855, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: ba0cfb55200620745bbdd0436d06df55, type: 2}
+    - target: {fileID: 1810264503015213574, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 321443539a30f864a9733fcf9185cb2b, type: 2}
     - target: {fileID: 1976131358612690085, guid: b291e423cead7d948aba59fc380ebe80, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -30,7 +30,6 @@ public class GameManager : Singleton<GameManager>
     {
         get { return cycleCurr; }
     }
-    private bool wonLevel;
     #endregion
 
     #region PlayerStuff
@@ -78,6 +77,8 @@ public class GameManager : Singleton<GameManager>
     [Header("UIAnimations")]
     [SerializeField]
     private Animator crossfade;
+    [SerializeField]
+    private Animator portal;
     private bool canPause;
     public bool canPauseProp
     {
@@ -155,7 +156,6 @@ public class GameManager : Singleton<GameManager>
     {
         HidePauseMenu();
         HideWinMenu();
-        wonLevel = false;
 
         currLevelIndex = SceneManager.GetActiveScene().buildIndex; //set the level index to the currently loaded one
 
@@ -236,16 +236,20 @@ public class GameManager : Singleton<GameManager>
         EndBuffs();
         Debug.Log("cycleCurr: " + cycleCurr);
         //update ui
-        if (cycleCurr <= 0) VictoryAnimation();
-        else ChangeStage(0, currStage, playerRespawnPos);
+        portal.SetBool("ReachedEnd", true); 
+        //if (cycleCurr <= 0) VictoryAnimation();
+        //else ChangeStage(0, currStage, playerRespawnPos);
     }
 
     
-    private void VictoryAnimation()
+    public void NewCycle()
     {
-        //if (!wonLevel) playerController.EnterRift();
-        //wonLevel = true;
-        WinLevel();
+        ChangeStage(0, currStage, playerRespawnPos);
+    }
+
+    public void TeleportPlayer()
+    {
+        playerPrefab.transform.position = new Vector3(-300, 1);
     }
 
     public void WinLevel()
@@ -480,5 +484,16 @@ public class GameManager : Singleton<GameManager>
     public void RemoveFreezable(IFreezeable toRemove)
     {
         freezeables.Remove(toRemove);
+    }
+
+    public void setPlayerInvuln(bool state)
+    {
+        playerController.playerImmunity = state;
+    }
+
+    public void setPlayerController(bool state)
+    {
+        if (!state) playerController.playerInput.DeactivateInput();
+        else playerController.playerInput.ActivateInput();
     }
 }

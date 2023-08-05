@@ -17,7 +17,12 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     //animation
     [SerializeField]
     private Animator animator;
-    private bool immune;
+    private bool immune = false;
+    public bool playerImmunity
+    {
+        get { return immune; }
+        set { immune = value; }
+    }
 
     #region HorizontalMovementFields
     [Header("Movement")]
@@ -227,8 +232,6 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         holdColliderCol.sharedMaterial = defaultMaterial;   //likewise for the child object, HoldingCollider. Make sure to set the collision box's physics material properly
 
         jumpBuffHeight = Mathf.Sqrt(-2 * Physics2D.gravity.y * maxJumpHeight * jumpBuffMultiplier);
-
-        immune = false;
 
         //debugs
         Debug.Log("initialJumpVelocity: " + initialJumpVelocity.y);
@@ -533,11 +536,5 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     {
         isCrouching = false;
         Debug.Log("You are no longer crouching");
-    }
-
-    public void EnterRift()
-    {
-        immune = true;
-        animator.SetBool("LevelEnd", true);
     }
 }
