@@ -5,12 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    //fields
+    [SerializeField]
+    private GameObject TitleScreen;
+    [SerializeField]
+    private GameObject CreditsScreen;
+    private string Url = "http://desdenova.bandcamp.com/";
+
     private void Start()
     {
         GameManager manager = GameManager.FindObjectOfType<GameManager>();
         if (manager != null)
         Destroy(GameManager.Instance.gameObject);   //get rid of the gamemanager to prevent conflicting canvases
         Cursor.visible = true;
+        TitleScreen.SetActive(true);
+        CreditsScreen.SetActive(false);
     }
 
     private void PlayGame()
@@ -25,6 +35,22 @@ public class MainMenu : MonoBehaviour
         #endif
         Application.Quit();
     }
+    private void ViewCredits()
+    {
+        CreditsScreen.SetActive(true);
+        TitleScreen.SetActive(false);
+    }
+
+    private void ReturnToMenu()
+    {
+        TitleScreen.SetActive(true);
+        CreditsScreen.SetActive(false);
+    }
+
+    private void OpenBandcampUrl()
+    {
+        Application.OpenURL(Url);
+    }
 
     public void OnPlayGameClick()
     {
@@ -34,5 +60,20 @@ public class MainMenu : MonoBehaviour
     public void OnQuitGameClick()
     {
         QuitGame();
+    }
+
+    public void OnCreditsBtnClick()
+    {
+        ViewCredits();
+    }
+
+    public void OnMainMenuClick()
+    {
+        ReturnToMenu();
+    }
+
+    public void OnBandcampClick()
+    {
+        OpenBandcampUrl();
     }
 }

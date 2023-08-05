@@ -69,7 +69,7 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     private IEnumerator Crumble()
     {
         Color c = spriteRenderer.color;
-        for (float alpha = 1f; alpha >= 0; alpha -= 0.01f)
+        for (float alpha = 1f; alpha >= 0; alpha -= 0.2f)
         {
             c.a = alpha;
             spriteRenderer.color = c;
