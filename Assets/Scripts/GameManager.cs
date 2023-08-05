@@ -79,11 +79,6 @@ public class GameManager : Singleton<GameManager>
     private Animator crossfade;
     [SerializeField]
     private Animator portal;
-    private bool canPause;
-    public bool canPauseProp
-    {
-        set { canPause = value; }
-    }
 
     #endregion
 
@@ -236,9 +231,8 @@ public class GameManager : Singleton<GameManager>
         EndBuffs();
         Debug.Log("cycleCurr: " + cycleCurr);
         //update ui
-        portal.SetBool("ReachedEnd", true); 
-        //if (cycleCurr <= 0) VictoryAnimation();
-        //else ChangeStage(0, currStage, playerRespawnPos);
+        portal.SetBool("ReachedEnd", true);
+        FreezeEverything();
     }
 
     
@@ -336,7 +330,7 @@ public class GameManager : Singleton<GameManager>
     public void TogglePauseMenu()
     {
         if (!winMenu.activeInHierarchy) { 
-            if (!pauseMenu.activeInHierarchy && canPause) ShowPauseMenu();
+            if (!pauseMenu.activeInHierarchy) ShowPauseMenu();
             else HidePauseMenu();
         }
     }
@@ -479,6 +473,17 @@ public class GameManager : Singleton<GameManager>
                     i.UnFreeze();
                 }
                 break;
+        }
+        if (pickUpTimer > 0) pickUpTimer = 0;
+    }
+    public void FreezeEverything()
+    {
+        EndBuffs();
+        activePickUp = PickUpType.TimeFreezeBuff;
+        pickUpTimer = 10000;
+        foreach (IFreezeable i in freezeables)
+        {
+            i.Freeze();
         }
     }
     public void RemoveFreezable(IFreezeable toRemove)
