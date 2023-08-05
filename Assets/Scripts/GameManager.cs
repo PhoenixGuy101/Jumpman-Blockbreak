@@ -285,6 +285,8 @@ public class GameManager : Singleton<GameManager>
 
         crossfade.SetBool("LevelLoaded", false);
         crossfade.SetBool("LevelEnded", true);
+        playerDeaths = 0;
+        playTime = 0;
         LoadLevel(currLevelIndex);
     }
 
@@ -323,8 +325,10 @@ public class GameManager : Singleton<GameManager>
 
     private void PlayerRespawn()
     {
-        ReplayLevel();
-        
+        crossfade.SetBool("LevelLoaded", false);
+        crossfade.SetBool("LevelEnded", true);
+        LoadLevel(currLevelIndex);
+
         //ChangeStage(0, currStage, playerRespawnPos);
 
         //playerPrefab.transform.position = playerRespawnPos;
