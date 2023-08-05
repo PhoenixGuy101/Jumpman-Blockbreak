@@ -13,9 +13,11 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private Collider2D coll;
     public PlayerInput playerInput;
 
+
     //animation
     [SerializeField]
     private Animator animator;
+    private bool immune;
 
     #region HorizontalMovementFields
     [Header("Movement")]
@@ -183,7 +185,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     void IDamageable.Die()
     {
         if (holding != null) grabDrop(); //drop the item if the player dies
-        OnPlayerDeath();
+        if (!immune) OnPlayerDeath();
     }
 
     private void OnEnable()
@@ -225,6 +227,8 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         holdColliderCol.sharedMaterial = defaultMaterial;   //likewise for the child object, HoldingCollider. Make sure to set the collision box's physics material properly
 
         jumpBuffHeight = Mathf.Sqrt(-2 * Physics2D.gravity.y * maxJumpHeight * jumpBuffMultiplier);
+
+        immune = false;
 
         //debugs
         Debug.Log("initialJumpVelocity: " + initialJumpVelocity.y);
@@ -347,6 +351,7 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     private void OnHorizontalMovement(InputValue movementValue)
     {
         dirX = movementValue.Get<float>();
+        Debug.Log("FacingRight: " + facingRight);
 
         if (!limitAerialTurning && Time.timeScale > 0) Turn(); //change the scale based on what direction the player has been facing, swapping around the sprite
                                          //only occurs if the limitAerialTurning is turned off if so, player will always "turn around" to the motion, even in the air
@@ -489,13 +494,16 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
     //turns the player based on player horizontal movement input
     private void Turn()
     {
+        Debug.Log("In Turn()");
         if (dirX > 0 && facingRight == false)
         {
+            Debug.Log("Turn to face right");
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             facingRight = true;
         }
         else if (dirX < 0 && facingRight == true)
         {
+            Debug.Log("Turn to face left");
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             facingRight = false;
         }
@@ -527,5 +535,9 @@ public class PlayerController : MonoBehaviour, IPlayer, IDamageable
         Debug.Log("You are no longer crouching");
     }
 
-    
+    public void EnterRift()
+    {
+        immune = true;
+        animator.SetBool("LevelEnd", true);
+    }
 }

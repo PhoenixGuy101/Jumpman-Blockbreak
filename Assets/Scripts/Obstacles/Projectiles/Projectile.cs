@@ -27,8 +27,8 @@ public class Projectile : FreezeableFunctionality, IProjectile, IObstacle, IFree
     protected virtual void OnEnable()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        Debug.Log("rigidbody: " + rb);
-        Debug.Log("Arrow Position: " + transform.position);
+        //Debug.Log("rigidbody: " + rb);
+        //Debug.Log("Arrow Position: " + transform.position);
         isMoving = false;
     }
     

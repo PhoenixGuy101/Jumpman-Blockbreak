@@ -26,6 +26,11 @@ public class GameManager : Singleton<GameManager>
     }
     private int cycleTotal;
     private int cycleCurr;
+    public int currentCycle
+    {
+        get { return cycleCurr; }
+    }
+    private bool wonLevel;
     #endregion
 
     #region PlayerStuff
@@ -73,6 +78,11 @@ public class GameManager : Singleton<GameManager>
     [Header("UIAnimations")]
     [SerializeField]
     private Animator crossfade;
+    private bool canPause;
+    public bool canPauseProp
+    {
+        set { canPause = value; }
+    }
 
     #endregion
 
@@ -145,6 +155,7 @@ public class GameManager : Singleton<GameManager>
     {
         HidePauseMenu();
         HideWinMenu();
+        wonLevel = false;
 
         currLevelIndex = SceneManager.GetActiveScene().buildIndex; //set the level index to the currently loaded one
 
@@ -225,12 +236,19 @@ public class GameManager : Singleton<GameManager>
         EndBuffs();
         Debug.Log("cycleCurr: " + cycleCurr);
         //update ui
-        if (cycleCurr <= 0) WinLevel();
+        if (cycleCurr <= 0) VictoryAnimation();
         else ChangeStage(0, currStage, playerRespawnPos);
     }
 
     
-    private void WinLevel()
+    private void VictoryAnimation()
+    {
+        //if (!wonLevel) playerController.EnterRift();
+        //wonLevel = true;
+        WinLevel();
+    }
+
+    public void WinLevel()
     {
         ShowWinMenu();
         Pause();
@@ -314,7 +332,7 @@ public class GameManager : Singleton<GameManager>
     public void TogglePauseMenu()
     {
         if (!winMenu.activeInHierarchy) { 
-            if (!pauseMenu.activeInHierarchy) ShowPauseMenu();
+            if (!pauseMenu.activeInHierarchy && canPause) ShowPauseMenu();
             else HidePauseMenu();
         }
     }

@@ -24,6 +24,7 @@ public class Arrow : Projectile, IProjectile, IObstacle, IFreezeable
             isMoving = false;
             collision.gameObject.TryGetComponent(out IDamageable pInterface);
             if (pInterface != null) pInterface.Die();
+            Disappear();
         }
         else if (collision.gameObject.CompareTag("Deteriorates"))
         {

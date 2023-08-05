@@ -57,7 +57,7 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     private void LoseState()
     {
         leaveLeft--;
-        Debug.Log("Block Health: " + leaveLeft);
+        //Debug.Log("Block Health: " + leaveLeft);
         if (((float)leaveLeft) / ((float)leaveTotal) > .5) spriteRenderer.sprite = damagedSprite;
         else if (leaveLeft > 0) spriteRenderer.sprite = destroyedSprite;
         else
@@ -73,7 +73,6 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
         {
             c.a = alpha;
             spriteRenderer.color = c;
-            Debug.Log("Alpha: " + alpha);
             yield return null;
         }
         Destroy(gameObject); //will need to disappear or play a crumbling animation.
