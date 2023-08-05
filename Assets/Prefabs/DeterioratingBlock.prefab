@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4742366622384842570}
+  - component: {fileID: 4742366622384842566}
+  - component: {fileID: 1888548528371683290}
   - component: {fileID: 4742366622384842567}
   - component: {fileID: 4742366622384842568}
   - component: {fileID: 4742366622384842569}
-  - component: {fileID: 4742366622384842566}
-  - component: {fileID: 1888548528371683290}
   m_Layer: 0
   m_Name: DeterioratingBlock
   m_TagString: Deteriorates
@@ -36,6 +36,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4742366622384842566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742366622384842571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29519fd17fe998e47b86c0cad94bc7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leaveTotal: 3
+  healthySprite: {fileID: 21300000, guid: cd9f1ea9cabfd9846856124da951c6f2, type: 3}
+  damagedSprite: {fileID: 21300000, guid: 3201af59e931b6e45bc1afc58080a8fd, type: 3}
+  destroyedSprite: {fileID: 21300000, guid: 7e4f268a6e06cf943a35214cd32e34c6, type: 3}
+--- !u!114 &1888548528371683290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742366622384842571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca0ecc73c32c2a4cb3a22280e48de0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willReset: 0
 --- !u!212 &4742366622384842567
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,32 +164,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4742366622384842566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4742366622384842571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29519fd17fe998e47b86c0cad94bc7f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leaveTotal: 3
-  healthySprite: {fileID: 21300000, guid: cd9f1ea9cabfd9846856124da951c6f2, type: 3}
-  damagedSprite: {fileID: 21300000, guid: 3201af59e931b6e45bc1afc58080a8fd, type: 3}
-  destroyedSprite: {fileID: 21300000, guid: 7e4f268a6e06cf943a35214cd32e34c6, type: 3}
---- !u!114 &1888548528371683290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4742366622384842571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ca0ecc73c32c2a4cb3a22280e48de0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  willReset: 0

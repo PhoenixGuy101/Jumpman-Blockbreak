@@ -6,6 +6,7 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
 {
     //fields
     [SerializeField]
+    [Range(1, 3)]
     private int leaveTotal = 3; //how many times the player can land and leave the platform before it is destroyed (editable in the inspector)
     private int leaveLeft;      //a tracker for how many times the player has left the platform
     private bool playerOn;      //a variable to confirm the player landed on the platform.
@@ -34,7 +35,18 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
         leaveLeft = leaveTotal;
         playerOn = false;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = healthySprite;
+        switch (leaveTotal)
+        {
+            case 3:
+                spriteRenderer.sprite = healthySprite;
+                break;
+            case 2:
+                spriteRenderer.sprite = damagedSprite;
+                break;
+            case 1:
+                spriteRenderer.sprite = destroyedSprite;
+                break;
+        }
         Debug.Log("Block Health: " + leaveLeft);
     }
 
@@ -58,8 +70,8 @@ public class DeterioratingPlatform : MonoBehaviour, IObstacle, IDeteriorate
     {
         leaveLeft--;
         //Debug.Log("Block Health: " + leaveLeft);
-        if (((float)leaveLeft) / ((float)leaveTotal) > .5) spriteRenderer.sprite = damagedSprite;
-        else if (leaveLeft > 0) spriteRenderer.sprite = destroyedSprite;
+        if (leaveLeft == 2) spriteRenderer.sprite = damagedSprite;
+        else if (leaveLeft == 1) spriteRenderer.sprite = destroyedSprite;
         else
         {
             StartCoroutine(Crumble());
