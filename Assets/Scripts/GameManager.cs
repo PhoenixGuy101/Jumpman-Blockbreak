@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class GameManager : Singleton<GameManager>
@@ -48,7 +49,7 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region PickUpStuff
-    private PickUpType activePickUp;
+    private PickUpType activePickUp = PickUpType.None;
     private float pickUpTimer;
     private List<IFreezeable> freezeables = new();
     public IFreezeable freezableManager
@@ -79,6 +80,22 @@ public class GameManager : Singleton<GameManager>
     private Animator crossfade;
     [SerializeField]
     private Animator portal;
+
+    #endregion
+
+    #region HUD
+    [Header("HUD Elements")]
+    [SerializeField]
+    private Image buffImage;
+    [SerializeField]
+    private Sprite jumpHeightBuffSprite;
+    [SerializeField]
+    private Sprite freezeTimeBuffSprite;
+    [SerializeField]
+    private TMP_Text buffTimerText;
+    [SerializeField]
+    private TMP_Text cycleCurrText;
+    private bool timerOff = false;
 
     #endregion
 
@@ -140,6 +157,7 @@ public class GameManager : Singleton<GameManager>
             if (pickUpTimer > 0)
             { 
                 pickUpTimer -= Time.deltaTime;
+                if (!timerOff) buffTimerText.text = Mathf.Ceil(pickUpTimer).ToString();
                 //Debug.Log("Buff Timer: " + pickUpTimer);
             }
             else EndBuffs();
@@ -175,6 +193,9 @@ public class GameManager : Singleton<GameManager>
 
             if (stageArray.Length >= 1) InitStage(0); //initialize stage 0 if there's at least 1 stage present
         }
+        activePickUp = PickUpType.None;
+        SetupHudTimer();
+        UpdateCycleHUD();
         crossfade.SetBool("LevelEnded", false);
         crossfade.SetBool("LevelLoaded", true);
 
@@ -228,6 +249,7 @@ public class GameManager : Singleton<GameManager>
     private void ReachedEnd()
     {
         cycleCurr--;
+        UpdateCycleHUD();
         EndBuffs();
         Debug.Log("cycleCurr: " + cycleCurr);
         //update ui
@@ -404,6 +426,40 @@ public class GameManager : Singleton<GameManager>
         GoToMainMenu();
     }
     #endregion
+
+    #region HUDMethods
+    private void SetupHudTimer()
+    {
+        switch (activePickUp)
+        {
+            case PickUpType.None:
+                buffImage.sprite = null;
+                buffImage.color = new Color(1,1,1,0);
+                buffTimerText.text = null;
+                break;
+            case PickUpType.JumpHeightBuff:
+                buffImage.sprite = jumpHeightBuffSprite;
+                buffImage.color = new Color(1, 1, 1, 1);
+                buffTimerText.text = Mathf.Ceil(pickUpTimer).ToString();
+                break;
+            case PickUpType.TimeFreezeBuff:
+                buffImage.sprite = freezeTimeBuffSprite;
+                buffImage.color = new Color(1, 1, 1, 1);
+                buffTimerText.text = Mathf.Ceil(pickUpTimer).ToString();
+                break;
+        }
+    }
+
+    private void UpdateCycleHUD()
+    {
+        if (cycleCurr > 0)
+        {
+            cycleCurrText.text = cycleCurr.ToString();
+        }
+        else cycleCurrText.text = null;
+    }
+
+    #endregion
     #endregion
 
     private string GetCurrentTime()
@@ -452,6 +508,8 @@ public class GameManager : Singleton<GameManager>
                     break;
             }
         }
+        timerOff = false;
+        SetupHudTimer();
         Destroy(pickUpObject);
     }
     public void EndBuffs()
@@ -475,10 +533,12 @@ public class GameManager : Singleton<GameManager>
                 break;
         }
         if (pickUpTimer > 0) pickUpTimer = 0;
+        SetupHudTimer();
     }
     public void FreezeEverything()
     {
         EndBuffs();
+        timerOff = true;
         activePickUp = PickUpType.TimeFreezeBuff;
         pickUpTimer = 10000;
         foreach (IFreezeable i in freezeables)

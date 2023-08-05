@@ -11,6 +11,6 @@ public class PortalTransitionCycleAnnouncement : MonoBehaviour
     {
 
         if (GameManager.Instance.currentCycle != 0) cycleText.text = GameManager.Instance.currentCycle.ToString();
-        else cycleText.text = "";
+        else cycleText.text = null;
     }
 }
