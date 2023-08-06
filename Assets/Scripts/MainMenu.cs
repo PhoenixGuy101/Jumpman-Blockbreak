@@ -78,6 +78,7 @@ public class MainMenu : MonoBehaviour
     {
         TitleScreen.SetActive(true);
         CreditsScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
     }
 
     private void OpenBandcampUrl()
@@ -114,6 +115,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+    private void PlayLevel5()
+    {
+        SceneManager.LoadScene(5);
+    }
     #endregion
     #region BtnClick
     public void OnLvl2Click()
@@ -127,6 +132,10 @@ public class MainMenu : MonoBehaviour
     public void OnLvl4Click()
     {
         PlayLevel4();
+    }
+    public void OnLvl5Click()
+    {
+        PlayLevel5();
     }
     #endregion
     #endregion
