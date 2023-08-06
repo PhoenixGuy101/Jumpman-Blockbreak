@@ -10318,7 +10318,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space to Jump
+  m_text: 'Space to Jump
+
+    2x to Double Jump'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00e73f2e4b5c6f64aac74b4ef265090c, type: 2}
   m_sharedMaterial: {fileID: -3078697919180637437, guid: 00e73f2e4b5c6f64aac74b4ef265090c, type: 2}

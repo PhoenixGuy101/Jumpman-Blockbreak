@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - PickUp
   - Deteriorates
+  - Projectile
   layers:
   - Default
   - TransparentFX

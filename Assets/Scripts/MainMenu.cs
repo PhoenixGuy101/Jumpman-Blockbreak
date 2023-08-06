@@ -102,40 +102,39 @@ public class MainMenu : MonoBehaviour
 
     #region LevelSelect
     #region PlayLevel
-    private void PlayLevel2()
+    private void PlayLevel(int index)
     {
-        SceneManager.LoadScene(2);
-    }
-    
-    private void PlayLevel3()
-    {
-        SceneManager.LoadScene(3);
-    }
-    private void PlayLevel4()
-    {
-        SceneManager.LoadScene(4);
-    }
-    private void PlayLevel5()
-    {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(index);
     }
     #endregion
     #region BtnClick
     public void OnLvl2Click()
     {
-        PlayLevel2();
+        PlayLevel(2);
     }
     public void OnLvl3Click()
     {
-        PlayLevel3();
+        PlayLevel(3);
     }
     public void OnLvl4Click()
     {
-        PlayLevel4();
+        PlayLevel(4);
     }
     public void OnLvl5Click()
     {
-        PlayLevel5();
+        PlayLevel(5);
+    }
+    public void OnLvl6Click()
+    {
+        PlayLevel(6);
+    }
+    public void OnLvl7Click()
+    {
+        PlayLevel(7);
+    }
+    public void OnLvl8Click()
+    {
+        PlayLevel(8);
     }
     #endregion
     #endregion

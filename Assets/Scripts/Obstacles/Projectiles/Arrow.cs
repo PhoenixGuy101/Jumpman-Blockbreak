@@ -33,7 +33,7 @@ public class Arrow : Projectile, IProjectile, IObstacle, IFreezeable
             if (deterInter != null) deterInter.deteriorate();
             Disappear();
         }
-        else
+        else if (!collision.gameObject.CompareTag("Projectile"))
         {
             Disappear();
         }
