@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1776317993227475274}
   m_Layer: 0
-  m_Name: Misc
+  m_Name: Buffs&Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject CreditsScreen;
     private string Url = "http://desdenova.bandcamp.com/";
+    [SerializeField]
+    private GameObject LevelSelectScreen;
 
     private void Start()
     {
@@ -21,8 +23,9 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         TitleScreen.SetActive(true);
         CreditsScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
     }
-
+    #region MainMenu
     private void PlayGame()
     {
         SceneManager.LoadScene(1);
@@ -39,19 +42,16 @@ public class MainMenu : MonoBehaviour
     {
         CreditsScreen.SetActive(true);
         TitleScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
     }
-
-    private void ReturnToMenu()
+    private void ViewLevels()
     {
-        TitleScreen.SetActive(true);
+        LevelSelectScreen.SetActive(true);
         CreditsScreen.SetActive(false);
+        TitleScreen.SetActive(false);
     }
 
-    private void OpenBandcampUrl()
-    {
-        Application.OpenURL(Url);
-    }
-
+    #region BtnClicks
     public void OnPlayGameClick()
     {
         PlayGame();
@@ -66,7 +66,27 @@ public class MainMenu : MonoBehaviour
     {
         ViewCredits();
     }
+    public void OnLevelSelectBtnClick()
+    {
+        ViewLevels();
+    }
+    #endregion
+    #endregion
 
+    #region CreditsMenu
+    private void ReturnToMenu()
+    {
+        TitleScreen.SetActive(true);
+        CreditsScreen.SetActive(false);
+    }
+
+    private void OpenBandcampUrl()
+    {
+        Application.OpenURL(Url);
+    }
+
+
+    #region BtnClicks
     public void OnMainMenuClick()
     {
         ReturnToMenu();
@@ -76,4 +96,30 @@ public class MainMenu : MonoBehaviour
     {
         OpenBandcampUrl();
     }
+    #endregion
+    #endregion
+
+    #region LevelSelect
+    #region PlayLevel
+    private void PlayLevel2()
+    {
+        SceneManager.LoadScene(2);
+    }
+    
+    private void PlayLevel3()
+    {
+        SceneManager.LoadScene(3);
+    }
+    #endregion
+    #region BtnClick
+    public void OnLvl2Click()
+    {
+        PlayLevel2();
+    }
+    public void OnLvl3Click()
+    {
+        PlayLevel3();
+    }
+    #endregion
+    #endregion
 }
