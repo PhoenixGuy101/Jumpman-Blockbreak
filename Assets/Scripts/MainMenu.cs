@@ -110,6 +110,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    private void PlayLevel4()
+    {
+        SceneManager.LoadScene(4);
+    }
     #endregion
     #region BtnClick
     public void OnLvl2Click()
@@ -119,6 +123,10 @@ public class MainMenu : MonoBehaviour
     public void OnLvl3Click()
     {
         PlayLevel3();
+    }
+    public void OnLvl4Click()
+    {
+        PlayLevel4();
     }
     #endregion
     #endregion
