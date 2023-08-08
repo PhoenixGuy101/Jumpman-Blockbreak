@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2302193759759944022}
   - component: {fileID: 2302193759759944361}
   - component: {fileID: 6205932274146128237}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ArrowShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
